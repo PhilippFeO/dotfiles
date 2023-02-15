@@ -1,0 +1,19 @@
+{
+    "abbrev": "",
+    "description": [
+        "Fügt eine neue Folie in der Präsentation hinzu"
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "Beamer: Neue Folie",
+    "shortcut": "",
+    "tag": [
+        "\\begin{frame}",
+        "\t\\frametitle{%|}",
+        "\\end{frame}",
+        "",
+        "%% --------------------------------------",
+        ""
+    ],
+    "trigger": "nframe"
+}

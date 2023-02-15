@@ -1,0 +1,25 @@
+{
+    "abbrev": "",
+    "description": [
+        "Transposes the two characters to the left and right of the cursor."
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "Transpose Characters",
+    "shortcut": "Alt+X",
+    "tag": [
+        "%SCRIPT",
+        "/* V1.1 2022-04-18 by octaeder */",
+        "cursor.beginEditBlock();",
+        "cursor.movePosition(1,cursorEnums.Left,cursorEnums.KeepAnchor);",
+        "leftchar = cursor.selectedText();",
+        "cursor.removeSelectedText();",
+        "cursor.movePosition(1,cursorEnums.Right,cursorEnums.KeepAnchor);",
+        "rightchar = cursor.selectedText();",
+        "cursor.removeSelectedText();",
+        "editor.write(rightchar + leftchar);",
+        "cursor.movePosition(1,cursorEnums.Left);",
+        "cursor.endEditBlock();"
+    ],
+    "trigger": ""
+}

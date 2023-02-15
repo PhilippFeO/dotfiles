@@ -1,0 +1,15 @@
+{
+    "abbrev": "",
+    "description": [
+        ""
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "Neue Zeile hinzufügen",
+    "shortcut": "",
+    "tag": [
+        " \\\\",
+        "%|"
+    ],
+    "trigger": "(\\\\§ | nwl)"
+}

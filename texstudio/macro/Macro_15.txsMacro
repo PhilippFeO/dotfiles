@@ -1,0 +1,14 @@
+{
+    "abbrev": "",
+    "description": [
+        "Fügt eine dünne Linie für die optische Trennung in einem LaTeX-Dokument ein, bspw. um Sections oder Folien von einandere abzuheben"
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "Trenner dünn",
+    "shortcut": "",
+    "tag": [
+        "%% --------------------------------------"
+    ],
+    "trigger": "---"
+}

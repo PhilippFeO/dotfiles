@@ -1,0 +1,14 @@
+{
+    "abbrev": "",
+    "description": [
+        "Fügt eine itemize-Umgebung mit erstem Stichpunkt (\\item) ein. Trigger: enumu (ENUMerate-Umgebung)"
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "enumerate-Umgebung mit erster Nummer",
+    "shortcut": "",
+    "tag": [
+        "%enumerate"
+    ],
+    "trigger": "enumu"
+}

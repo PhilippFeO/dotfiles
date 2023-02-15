@@ -1,0 +1,18 @@
+{
+    "abbrev": "",
+    "description": [
+        "Fügt eine Formel-/Mathematik-Umgebung ein, die eine abgesetzte „klassische“ Formel darstellt und keine Referenz für eine Nummerierung erhält. Es wird nicht „\\begin{equation}...\\end{equation}“ sondern „\\[...\\]“ verwendet."
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "Mathematik: Abgesetzte Formel ohne Nummerierung per \\[...\\] [Skript]",
+    "shortcut": "",
+    "tag": [
+        "%SCRIPT\r",
+        "\r",
+        "editor.write(\"\\\\[\\n\\n\\\\]\");\r",
+        "cursor.movePosition(1, cursorEnums.PreviousLine, cursorEnums.MoveAnchor);\r",
+        "editor.write(\"\\t\");"
+    ],
+    "trigger": ""
+}

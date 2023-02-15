@@ -1,0 +1,14 @@
+{
+    "abbrev": "",
+    "description": [
+        "Fügt eine itemize-Umgebung mit erstem Stichpunkt (\\item) ein. Trigger: itemu (ITEMize-Umgebung)"
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "itemize-Umgebung mit Stichpunkt",
+    "shortcut": "",
+    "tag": [
+        "%itemize"
+    ],
+    "trigger": "itemu"
+}

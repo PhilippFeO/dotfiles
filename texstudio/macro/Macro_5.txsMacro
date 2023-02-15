@@ -1,0 +1,18 @@
+{
+    "abbrev": "",
+    "description": [
+        "Adds an itemize environment with frame triggers, i.e. \"item<+->\" instead of \"item\".",
+        "",
+        "Shortcut: itemizeb (ITEMIZE for Beamer)"
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "itemize for beamer-documents",
+    "shortcut": "Ctrl+O",
+    "tag": [
+        "\\begin{itemize}",
+        "\t\\item<+-> %|",
+        "\\end{itemize}"
+    ],
+    "trigger": "itemizeb"
+}

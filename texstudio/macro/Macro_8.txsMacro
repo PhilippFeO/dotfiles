@@ -1,0 +1,18 @@
+{
+    "abbrev": "",
+    "description": [
+        "Fügt eine Formel-/Mathematik-Umgebung ein, die eine abgesetzte „klassische“ Formel darstellt und mit einer Nummerierung für eine Referenz versehen wird."
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "Mathematik: Abgesetzte Formel mit Nummerierung [Skript]",
+    "shortcut": "",
+    "tag": [
+        "%SCRIPT\r",
+        "\r",
+        "editor.write(\"\\\\begin{equation}\\n\\n\\\\end{equation}\");\r",
+        "cursor.movePosition(1, cursorEnums.PreviousLine, cursorEnums.MoveAnchor);\r",
+        "editor.write(\"\\t\");"
+    ],
+    "trigger": ""
+}

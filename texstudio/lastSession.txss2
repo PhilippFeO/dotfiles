@@ -1,0 +1,55 @@
+{
+    "InternalPDFViewer": {
+        "Embedded": false,
+        "File": ""
+    },
+    "Session": {
+        "Bookmarks": [
+        ],
+        "CurrentFile": "../../Dokumente/Bewerbungen/Impacts of tropospheric ozone on human health and vegetation in a changing climate/Vortrag/vortrag.tex",
+        "FileVersion": 1,
+        "Files": [
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "../../Dokumente/Bewerbungen/ECMWF - VN22-79 - Data assimilation of atmospheric aerosol and biomass burning or wildfires/ECMWF_VN22-79_daoaaabbw.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 0
+            },
+            {
+                "Col": 2,
+                "EditorGroup": 0,
+                "FileName": "../../Universität/Informatik/Master_Informatik/masterarbeit/masterarbeit-master-Vortrag/Vortrag/Einfuehrungsvortrag.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 15
+            },
+            {
+                "Col": 92,
+                "EditorGroup": 0,
+                "FileName": "../../Dokumente/Bewerbungen/Impacts of tropospheric ozone on human health and vegetation in a changing climate/Vortrag/vortrag.tex",
+                "FirstLine": 160,
+                "FoldedLines": "",
+                "Line": 192
+            },
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "../../Dokumente/Bewerbungen/Impacts of tropospheric ozone on human health and vegetation in a changing climate/Vortrag/vortrag2.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 153
+            },
+            {
+                "Col": 0,
+                "EditorGroup": 1,
+                "FileName": "../../Universität/Informatik/Master_Informatik/masterarbeit/abschlussvortrag/abschlussvortrag.tex",
+                "FirstLine": 22,
+                "FoldedLines": "",
+                "Line": 64
+            }
+        ],
+        "MasterFile": ""
+    }
+}

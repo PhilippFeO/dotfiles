@@ -1,0 +1,14 @@
+{
+    "abbrev": "",
+    "description": [
+        "Fügt eine Formel-/Mathematik-Umgebung ein, die eine abgesetzte „klassische“ Formel darstellt und mit einer Nummerierung für eine Referenz versehen wird."
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "Mathematik: Abgesetzte Formel mit Nummerierung [Umgebung]",
+    "shortcut": "",
+    "tag": [
+        "%equation"
+    ],
+    "trigger": "matheq"
+}

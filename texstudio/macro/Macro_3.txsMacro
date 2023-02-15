@@ -1,0 +1,14 @@
+{
+    "abbrev": "",
+    "description": [
+        "Fügt \\item in itemize- und enumerate-Umgebungen hinzu"
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "\\item hinzufügen",
+    "shortcut": "",
+    "tag": [
+        "\\item %|"
+    ],
+    "trigger": "ii"
+}

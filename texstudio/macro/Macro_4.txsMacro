@@ -1,0 +1,14 @@
+{
+    "abbrev": "",
+    "description": [
+        "Fügt in einem „beamer“-Vortrag „\\item<+->“ in „itemize“- und „enumerate“-Umgebungen hinzu"
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "\\item für „beamer“ hinzufügen",
+    "shortcut": "",
+    "tag": [
+        "\\item<+-> %|"
+    ],
+    "trigger": "iib"
+}

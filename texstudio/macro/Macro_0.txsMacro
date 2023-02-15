@@ -1,0 +1,20 @@
+{
+    "abbrev": "",
+    "description": [
+        "Fügt eine Notiz für eine Folie der beamer-Klasse hinzu, evtl. muss „\\documentclass[notes[=only]]{beamer}“ noch eingefügt werden.",
+        "WICHTIG: Man muss noch den Befehl „\\newcommand{\\mynote}[1]{\\note{\\Huge{#1}}}“ hinzufügen"
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "Beamer: Notiz für Folie der beamer-Klasse einfügen",
+    "shortcut": "",
+    "tag": [
+        "% --- NOTIZEN -----------------------------------",
+        "\\note{\\huge",
+        "\\begin{itemize}",
+        "\t\\item %|",
+        "\\end{itemize}",
+        "}"
+    ],
+    "trigger": "notee"
+}

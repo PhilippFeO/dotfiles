@@ -1,0 +1,16 @@
+{
+    "abbrev": "",
+    "description": [
+        "On some keyboard layouts, backslash is tedious to type. Hence, other symbols maybe easier to use as a starter to insert LaTeX commands."
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "Insert backslash and start completion with §",
+    "shortcut": "",
+    "tag": [
+        "%SCRIPT",
+        "cursor.insertText(\"\\\\\");",
+        "app.normalCompletion(); // öffnet das Auto-Vervollständigungsfenster"
+    ],
+    "trigger": "§"
+}

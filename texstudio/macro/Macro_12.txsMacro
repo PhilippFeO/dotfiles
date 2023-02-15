@@ -1,0 +1,14 @@
+{
+    "abbrev": "",
+    "description": [
+        "Fügt einen TODO-Kommentar ein; Trigger „todok“ (TODO-Kommentar), da ich mehrere Todo-Werkzeuge (todonotes) benutze und alle unterscheiden muss, bspw. wird eine TODO-Box per „todob“ ausgelöst."
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "Todo-Kommentar",
+    "shortcut": "",
+    "tag": [
+        "%% TODO %|"
+    ],
+    "trigger": "todok"
+}
