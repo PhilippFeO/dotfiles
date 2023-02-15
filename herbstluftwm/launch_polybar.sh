@@ -1,0 +1,1 @@
+/home/philipp/.config/polybar/launch_polybar.sh
