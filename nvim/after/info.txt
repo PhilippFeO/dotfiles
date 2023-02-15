@@ -1,0 +1,1 @@
+For more information on this structure, i. e. the after/plugin path, check ":help after-directory" and keep an eye on "plugin/".
