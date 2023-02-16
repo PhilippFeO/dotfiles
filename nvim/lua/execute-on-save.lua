@@ -1,34 +1,37 @@
+-- The following autocommand(s) serve as workflow utilities when solving leetcode challenges.
+-- On save the programs is executed and its output displayed on fresh buffer.
+
 -- <leader> <leader> x um Datei zu speichern und auszuführen
 
 local bufnr = -1
 
---vim.api.nvim_create_autocmd("BufWritePost", {
---    group = vim.api.nvim_create_augroup("SaveAndExecute", { clear = true }),
---    pattern = '*/leetcode/*', -- Apply only to files below dir "leetcode"
---    callback = function ()
---        -- Better have one initial line to clear Buffer contents.
---        -- Doesn't work with on_stdout/err (s. below)
---        vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, { "=== Output ==="}) -- wenn das
---        --verwendet wird, muss weiter unten -1 für STARTZEILE verwendet werden, um anzuhängen
---        vim.fn.jobstart({ "python3", vim.fn.expand('%')},
---        -- 2. Arg.: Was mit der Ausgabe passieren soll
---        {
---            stdout_buffered = true, -- Passes output of <jobstart> rowwise
---            stderr_buffered = true,
---            -- If not appended at the end (f.i. 0, -1) stderr overwrites stdout
---            on_stdout = function(_, data)
---                if data then
---                    vim.api.nvim_buf_set_lines(bufnr, -1, -1, false, data)
---                end
---            end,
---            on_stderr = function(_, data)
---                if data then
---                    vim.api.nvim_buf_set_lines(bufnr, -1, -1, false, data)
---                end
---            end
---        })
---    end
---})
+vim.api.nvim_create_autocmd("BufWritePost", {
+    group = vim.api.nvim_create_augroup("SaveAndExecute", { clear = true }),
+    pattern = '*/leetcode/*', -- Apply only to files below dir "leetcode"
+    callback = function ()
+        -- Better have one initial line to clear Buffer contents.
+        -- Doesn't work with on_stdout/err (s. below)
+        vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, { "=== Output ==="}) -- wenn das verwendet wird, muss weiter unten -1 für STARTZEILE verwendet werden, um anzuhängen
+        vim.fn.jobstart({ "python3", vim.fn.expand('%')},
+        -- 2. Arg.: Was mit der Ausgabe passieren soll
+        {
+            stdout_buffered = true, -- Passes output of <jobstart> rowwise
+            stderr_buffered = true,
+            -- If not appended at the end (f.i. 0, -1 for on_stdout/err) stderr overwrites stdout in the
+            -- buffer
+            on_stdout = function(_, data)
+                if data then
+                    vim.api.nvim_buf_set_lines(bufnr, -1, -1, false, data)
+                end
+            end,
+            on_stderr = function(_, data)
+                if data then
+                    vim.api.nvim_buf_set_lines(bufnr, -1, -1, false, data)
+                end
+            end
+        })
+    end
+})
 
 --vim.api.nvim_create_autocmd("BufWritePost", {
 --    group = vim.api.nvim_create_augroup("SaveAndExecute", { clear = true }),
