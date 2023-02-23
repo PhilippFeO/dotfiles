@@ -30,7 +30,7 @@ alias n='nvim'
 alias nvimf='nvim `fzf`'
 alias nf='nvimf'
 # Nutze LaTeX-Konfiguration
-alias nviml='nvim -u ~/.config/nvim/init-latex.lua'
+alias nviml='if [ ! -f .latexmkrc ]; then lnlatexmkrc; else echo "File ~/LaTeX/.latexmkrc already present (physically or as link)."; fi && nvim -u ~/.config/nvim/init-latex.lua'
 # Open Neovim help page directly from terminal
 alias nvimh='~/programmieren/skripte/nvim-help.sh'
 alias nh='nvimh'
@@ -85,6 +85,9 @@ alias sbashal='source ~/.bash_aliases'
 alias zimwiki='cd ~/zim_wiki/ && git add ~/zim_wiki && git commit -m "Einträge hinzugefügt" && git push && cd ~'
 # copy into general clipboard, f.i. content fo files as <c FILE>
 alias c='xclip -selection clipboard'
+
+alias karte='telnet mapscii.me'
+alias map='telnet mapscii.me'
 
 # "Conservation Mode" dh. Aufladung bis 60% einschalten oder ausschalten
 alias conservation-mode-off='echo 0 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode'
