@@ -4,11 +4,17 @@
 -- <leader> <leader> x um Datei zu speichern und auszuführen
 
 local bufnr = -1
+local group_id = vim.api.nvim_create_augroup("SaveAndExecute", { clear = true })
 
 vim.api.nvim_create_autocmd("BufWritePost", {
-    group = vim.api.nvim_create_augroup("SaveAndExecute", { clear = true }),
+    group = group_id,
     pattern = '*/leetcode/*', -- Apply only to files below dir "leetcode"
     callback = function ()
+        -- open new buffer, to this buffer will be written
+        if bufnr == -1 then
+            vim.cmd.new()
+            bufnr = vim.api.nvim_get_current_buf()
+        end
         -- Better have one initial line to clear Buffer contents.
         -- Doesn't work with on_stdout/err (s. below)
         vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, { "=== Output ==="}) -- wenn das verwendet wird, muss weiter unten -1 für STARTZEILE verwendet werden, um anzuhängen
@@ -33,15 +39,5 @@ vim.api.nvim_create_autocmd("BufWritePost", {
     end
 })
 
---vim.api.nvim_create_autocmd("BufWritePost", {
---    group = vim.api.nvim_create_augroup("SaveAndExecute", { clear = true }),
---    callback = function ()
---        if bufnr == -1 then
-----            print("bufnr: ", bufnr)
---            vim.cmd.new()
---            bufnr = vim.api.nvim_get_current_buf()
--- --           print("bufnr: ", bufnr)
---        end
---        vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, {"Hallo", "Welt" })
---    end
---})
+-- Close automatically opened buffer for the output on VimLeave.
+-- Abandoned. There is <:qa>.
