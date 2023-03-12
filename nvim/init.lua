@@ -6,6 +6,10 @@ require("set-options")
 require("autocommands")
 require("execute-on-save")
 
+-- vimwiki doesn't work, without explicitly requireing it
+-- No idea why
+--require("after.plugin.vimwiki")
+
 -- Since "vimtex" and "treesitter" do not work well together in terms of concealing,
 -- I decided to set up a specific "init-latex.lua" file, used when working with LaTeX
 -- or tex-files. The only difference to this file, that it excludes "treesitter" and
