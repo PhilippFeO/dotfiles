@@ -30,6 +30,10 @@ vim.api.nvim_set_keymap("n", "<leader>Y", [["+Y]], { noremap = true })
 -- Macht Skripte automatisch ausführbar
 vim.api.nvim_set_keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", { noremap = true })
 
+-- save and source current file (following <localleader>ll for compiling LaTeX via vimtex)
+vim.g.maplocalleader = ","
+vim.keymap.set("n", "<localleader>xx", ":w | source %<CR>", { noremap = true })
+
 
 -- ┌────────────────┐
 -- │ <C-?> Mappings │
@@ -45,11 +49,11 @@ vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true })
 -- wie oben nur halbe Seite NACH OBEN
 vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true })
 
--- Tastenkürzel, um in der geteilten Ansicht leichter navigieren zu können, da <C-w>[hjkl] umständlich zu tippen ist
---vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true })
---vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true })
---vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true })
---vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true })
+-- Adjust split size via <ALT-[hjkl]>
+vim.api.nvim_set_keymap("n", "<A-h>", ":vertical resize -5<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<A-l>", ":vertical resize +5<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<A-j>", ":resize -5<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<A-k>", ":resize +5<CR>", { noremap = true })
 
 
 -- ┌───────────────────┐
@@ -59,12 +63,23 @@ vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true })
 
 -- In den Normalmodus gehen, wenn man im <insert mode> oder <visual mode> ist
 -- Quelle: https://dev.to/benborla/vim-getting-rid-of-esc-key-to-switch-to-normal-mode-f3e
--- Press ii to return to normal mode when in insert mode
+-- Press ij to return to normal mode when in insert mode
 -- inoremap <ESC> <NOP> " Deaktiviert ESC-Taste
-vim.api.nvim_set_keymap("i", "ii", "<ESC>", { noremap = true })
--- Press ii to return to normal mode when in visual mode
+vim.api.nvim_set_keymap("i", "ij", "<ESC>", { noremap = true })
+-- Press ij to return to normal mode when in visual mode
 -- vnoremap <ESC> <NOP> " Deaktiviert ESC-Taste
-vim.api.nvim_set_keymap("v", "ii", "<ESC>", { noremap = true })
+vim.api.nvim_set_keymap("v", "ij", "<ESC>", { noremap = true })
+
+-- move wrapped lines as they were normal
+--  deactivated because key strokes like 15j, 6k dont longer work as expected.
+--vim.api.nvim_set_keymap("n", "j", "gj", { noremap = true})
+--vim.api.nvim_set_keymap("n", "k", "gk", { noremap = true})
+
+-- Mit <J> kann man im Normal-Mode die untere Zeile an die aktuelle hängen,
+-- allerdings wird dabei der Cursor an die Schnittstelle gesetzt. Das folgende
+-- Mapping sorgt dafür, dass der Cursor an aktueller Stelle verbleibt
+-- Quelle: https://www.youtube.com/watch?v=w7i4amO_zaE&t=1464s
+vim.api.nvim_set_keymap("n", "J", "mzJ`z", { noremap = true })
 
 -- Beim suchen kann man mit n (vorwärts) und N (rückwärts) zu den nächsten
 -- Treffern navigieren und wird auf nzz abgebildet
@@ -74,28 +89,13 @@ vim.api.nvim_set_keymap("v", "ii", "<ESC>", { noremap = true })
 vim.api.nvim_set_keymap("n", "n", "nzzzv", { noremap = true })
 vim.api.nvim_set_keymap("n", "N", "Nzzzv", { noremap = true })
 
--- Mit <J> kann man im Normal-Mode die untere Zeile an die aktuelle hängen,
--- allerdings wird dabei der Cursor an die Schnittstelle gesetzt. Das folgende
--- Mapping sorgt dafür, dass der Cursor an aktueller Stelle verbleibt
--- Quelle: https://www.youtube.com/watch?v=w7i4amO_zaE&t=1464s
-vim.api.nvim_set_keymap("n", "J", "mzJ`z", { noremap = true })
-
 -- Im Visual-Mode markierte Zeilen können per <J> und <K> verschoben werden
 -- Quelle: https://www.youtube.com/watch?v=w7i4amO_zaE&t=1464s
 vim.api.nvim_set_keymap("v", "J", ":m'>+1<CR>gv=gv", { noremap = true })
 vim.api.nvim_set_keymap("v", "K", ":m'<-2<CR>gv=gv", { noremap = true })
 
 
--- ┌──────────────────────────┐
--- │ (, [, {, ", ' completion │
--- └──────────────────────────┘
--- Klammern und Anführungszeichen automatisch schließen
--- <left> bedeutet, dass der Cursor um 1 nach links bewegt wird
---vim.api.nvim_set_keymap("i", [["]], [[""<left>]], { noremap = true })
---vim.api.nvim_set_keymap("i", "'", "''<left>", { noremap = true })
---vim.api.nvim_set_keymap("i", "(", "()<left>", { noremap = true })
---vim.api.nvim_set_keymap("i", "[", "[]<left>", { noremap = true })
---vim.api.nvim_set_keymap("i", "{", "{ noremap = true }<left>", {})
+-- "" completion
 vim.api.nvim_set_keymap("i", "\"", "\"\"<left>", {noremap=true})
 
 -- Überschreibt schließende Klammer/Anführungszeichen
