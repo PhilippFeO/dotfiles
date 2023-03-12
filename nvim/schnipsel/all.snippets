@@ -1,0 +1,6 @@
+# Own todo-snippet because the default one is to detailed.
+# Result: # TODO: $1 <21-02-2023> #
+snippet todo "TODO-Kommentar" bw
+`!p snip.rv=get_comment_format()[0]` TODO: $1 <`!v strftime('%d-%m-%Y')`> `!p snip.rv=get_comment_format()[2]`
+endsnippet
+
