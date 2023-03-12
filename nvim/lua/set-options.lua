@@ -3,9 +3,15 @@
 -- └─────────┘
 -- In dieser Datei setze ich alle Optionen, die man in Vim normalerweise per „set OPTION“ konfigurieren würde
 
-vim.opt.textwidth=0
-vim.opt.wrap=true
-vim.opt.wrapmargin=3
+-- disable Codeium keybindings, since <TAB> was blocked.
+vim.g.codeium_disable_bindings = 1
+
+vim.opt.linebreak = true
+vim.opt.breakindent = true
+vim.opt.wrap = true
+-- automatic line breaking 3 characters before right margin
+--vim.g.textwidth = 20
+--vim.g.wrapmargin = 3
 
 -- Deaktivieren der Maus (scrollen funktioniert aber noch)
 vim.opt.mouse=""
@@ -33,7 +39,7 @@ vim.opt.ignorecase = true
 -- (Man sollte nun mehr/bessere/kontrastreichere Farben zur Verfügung haben)
 vim.opt.termguicolors = true
 
--- Aktion der Taste ESC wird schneller ausgeführt
+-- Keybindings like "ci?" or "f?" can timeout after <ttimeoutlen> milliseconds
 vim.opt.ttimeout = true
 vim.opt.ttimeoutlen = 100
 
