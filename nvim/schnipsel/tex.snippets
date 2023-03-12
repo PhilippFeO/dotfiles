@@ -5,10 +5,21 @@ snippet bframe "New LaTeX beamer frame" bA
 endsnippet
 
 
-snippet inlm "$-Inline Math" wA
+snippet ilm "$-Inline Math" wA
 $ ${1} $ $0
 endsnippet
 
-snippet ilm "Inline Math" w
+snippet inm "Inline Math" w
 \\( ${1} \\) $0
+endsnippet
+
+# itemize-Umgebung
+snippet 'itm(\d)' "\item with slide indicator <…>" brA
+`!p snip.rv = '\\item <' + match.group(1) + '->'` $0
+endsnippet
+
+snippet mitem "Itemize" bi
+\begin{itemize}
+	\item ${0:${VISUAL}}
+\end{itemize}
 endsnippet
