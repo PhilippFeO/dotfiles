@@ -5,11 +5,5 @@
 -- the mechanic completely
 vim.g.python3_host_prog = '/usr/bin/python3'
 
--- automatic line breaking 3 characters before right margin
---vim.g.textwidth = 20
---vim.g.wrapmargin = 3
-vim.opt.linebreak = true
-vim.opt.breakindent = true
-vim.opt.wrap = true
-
-vim.cmd("let g:rainbow_active = 1")
+--vim.cmd("let g:rainbow_active = 1")
+vim.g.rainbow_active = 1
