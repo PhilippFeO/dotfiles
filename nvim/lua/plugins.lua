@@ -8,15 +8,18 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use( 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
+
     use 'lervag/vimtex'
+    --use 'lervag/wiki.vim'
+    use { 'lervag/wiki.vim', opt = false, event = 'VimEnter' }
 
     -- Colorschemes
     use( 'rose-pine/neovim', { as = 'rose-pine' })
     use 'rebelot/kanagawa.nvim'
     use 'mhartington/oceanic-next'
+    use 'navarasu/onedark.nvim'
 
     use 'frazrepo/vim-rainbow'
-
 
     -- Conquer of Completion (LSP)
     use {'neoclide/coc.nvim', branch = 'release'}
@@ -24,6 +27,7 @@ return require('packer').startup(function(use)
     use 'honza/vim-snippets'
 
     -- Codeium-Plugin
-    use 'Exafunction/codeium.vim'
-
+    -- Evtl. muss ich mir auf der Seite einen neuen Authentifizierungstoken holen.
+    -- https://github.com/Exafunction/codeium.vim
+    --use {'Exafunction/codeium.vim', disable = true}
 end)
