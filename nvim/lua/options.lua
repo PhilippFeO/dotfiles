@@ -1,10 +1,42 @@
--- ┌─────────┐
--- │ OPTIONS │
--- └─────────┘
--- In dieser Datei setze ich alle Optionen, die man in Vim normalerweise per „set OPTION“ konfigurieren würde
+-- [[ Setting options ]]
+-- See `:help vim.o`
 
 -- disable Codeium keybindings, since <TAB> was blocked.
 vim.g.codeium_disable_bindings = 1
+
+vim.g.language = "en_US.utf8"
+
+-- Dont show modes like -- INSERT --, becaues Lualine does
+vim.opt.showmode = false
+
+-- Make line and sign column transparent
+vim.cmd.highlight("clear LineNr")
+vim.cmd.highlight("clear SignColumn")
+
+-- Set highlight on search
+vim.o.hlsearch = false
+
+-- Sync clipboard between OS and Neovim.
+--  Remove this option if you want your OS clipboard to remain independent.
+--  See `:help 'clipboard'`
+vim.o.clipboard = 'unnamedplus'
+
+-- Save undo history
+vim.o.undofile = true
+
+-- Case insensitive searching UNLESS /C or capital in search
+vim.o.smartcase = true
+
+-- Keep signcolumn on by default
+vim.wo.signcolumn = 'yes'
+
+-- Decrease update time
+vim.o.updatetime = 250
+vim.o.timeout = true
+vim.o.timeoutlen = 300
+
+-- Set completeopt to have a better completion experience
+vim.o.completeopt = 'menuone,noselect'
 
 vim.opt.linebreak = true
 vim.opt.breakindent = true
@@ -16,9 +48,17 @@ vim.opt.wrap = true
 -- Deaktivieren der Maus (scrollen funktioniert aber noch)
 vim.opt.mouse=""
 
--- Statuszeile konfigurieren
+-- Deprecated due to use of lualine
+-- statusline
 -- Dateiname und prozentuale vertikale Position.
-vim.opt.statusline = "%t    %p%% of %L Lines"
+--vim.opt.statusline = "%t    %p%% of %L Lines"
+
+-- winbar
+-- s. :h statusline for formatting
+--  %=  shift to the right
+--  %m  idicates modified or not
+--  %f  path to file
+vim.o.winbar = "%=%m %f"
 
 -- Fenstertitel zeigt Dateiname
 vim.opt.title = true
@@ -38,10 +78,6 @@ vim.opt.ignorecase = true
 -- Aktiviert 24-Bit-Farben (davor 8-Bit)
 -- (Man sollte nun mehr/bessere/kontrastreichere Farben zur Verfügung haben)
 vim.opt.termguicolors = true
-
--- Keybindings like "ci?" or "f?" can timeout after <ttimeoutlen> milliseconds
-vim.opt.ttimeout = true
-vim.opt.ttimeoutlen = 100
 
 -- Tabs/Einrückungen auf 4 Leerzeichen setzen (Standard: 8 Zeichen lang, evtl. wird Tabulator-Zeichen verwendet und keine Leerzeichen)
 -- <tabstop> in Kombination mit <shiftwidth> und <expandtab=true> sorgt dafür, dass immer 4 Leerzeichen für eine/n Tab/Einrückung gesetzt werden.

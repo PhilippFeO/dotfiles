@@ -1,19 +1,13 @@
--- ┌───────────────┐
--- │ KEY MAPPINGS  │
--- └───────────────┘
--- Die Tastenkombinationen sind nach innerhalb der Gruppen nach alphabetisch nach Modus sortiert.
-
--- Weitere Plugin-spezifische Tastenkombinationen
---  after/plugin/coc.lua
---  after/plugin/coc-snippets.lua
+-- [[ Basic Keymaps ]]
 
 -- ┌───────────────────┐
 -- │ <leader> Mappings │
 -- └───────────────────┘
-vim.g.mapleader = " "
+-- <Leader>, <LocalLeader> is set in init.lua, because lazy.nvim wiches so
+
 -- Dieses Kopieren und Einfügen ohne dass das Markierte gespeichert wird und den alten Text überschreibt. Klappt irgendwie mit <leader> nicht.
 -- Im Visual-Mode markiertes wird durch vorher Geyanktes ersetzt ohne dass markierter Teil "das neue zu ersetzende" ist
-vim.api.nvim_set_keymap("x", "<leader>p", [["_dP]], { noremap = true })
+vim.api.nvim_set_keymap("x", "<leader>p", [["_dP]], { noremap = true, desc = "delete into \"_ and paste" })
 --xnoremap ,p "_dP
 
 -- Beim Betätigen von <<leader>s> wird automatisch ein Ersetzungsbefehl generiert, um das aktuelle Wort zu ersetzen. So muss man es nicht extr eintippen."
@@ -23,16 +17,15 @@ vim.api.nvim_set_keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Lef
 --vim.api.nvim_set_keymap("n", "<leader>t", ":vertical split | terminal <CR>", {})
 
 -- In die System-Zwischenablage kopieren
-vim.api.nvim_set_keymap("v", "<leader>y", [["+y]], { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>y", [["+y]], { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>Y", [["+Y]], { noremap = true })
+vim.api.nvim_set_keymap("v", "<leader>y", [["+y]], { noremap = true, desc = "Copy into system clipboard" })
+vim.api.nvim_set_keymap("n", "<leader>y", [["+y]], { noremap = true, desc = "Copy line into system clipboard" })
+vim.api.nvim_set_keymap("n", "<leader>Y", [["+Y]], { noremap = true, desc = "Copy rest of line into system clipboard" })
 
 -- Macht Skripte automatisch ausführbar
-vim.api.nvim_set_keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", { noremap = true, desc = "Make script executable" })
 
 -- save and source current file (following <localleader>ll for compiling LaTeX via vimtex)
-vim.g.maplocalleader = ","
-vim.keymap.set("n", "<localleader>xx", ":w | source %<CR>", { noremap = true })
+vim.keymap.set("n", "<localleader>xx", ":w | source %<CR>", { noremap = true, desc = "Save and source current file" })
 
 
 -- ┌────────────────┐
@@ -50,16 +43,23 @@ vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true })
 
 -- Adjust split size via <ALT-[hjkl]>
-vim.api.nvim_set_keymap("n", "<A-h>", ":vertical resize -5<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<A-l>", ":vertical resize +5<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<A-j>", ":resize -5<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<A-k>", ":resize +5<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<A-h>", ":vertical resize -5<CR>", { noremap = true, desc = "Shrink vertical split" })
+vim.api.nvim_set_keymap("n", "<A-l>", ":vertical resize +5<CR>", { noremap = true, desc = "Enlarge vertical split" })
+vim.api.nvim_set_keymap("n", "<A-j>", ":resize -5<CR>", { noremap = true, desc = "Shrink horizontal split" })
+vim.api.nvim_set_keymap("n", "<A-k>", ":resize +5<CR>", { noremap = true, desc = "Enlarge horizontal split" })
 
 
 -- ┌───────────────────┐
 -- │ "Letter" Mappings │
 -- └───────────────────┘
 -- Alle hier gelisteten Tastenkombinationen benutzen lediglich Buchstaben
+
+-- Keymaps for better default experience
+-- See `:help vim.keymap.set()`
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+-- Remap for dealing with word wrap
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- In den Normalmodus gehen, wenn man im <insert mode> oder <visual mode> ist
 -- Quelle: https://dev.to/benborla/vim-getting-rid-of-esc-key-to-switch-to-normal-mode-f3e
@@ -107,4 +107,3 @@ vim.api.nvim_set_keymap("i", "\"", "\"\"<left>", {noremap=true})
 -- vim.api.nvim_set_keymap("i", "<expr> ] strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" :", ""]"", { noremap = true })
 --vim.api.nvim_set_keymap("i", "<expr> '", strpart(getline('.'), col('.')-1, 1) == "'" ? "\<Right>" :", ""''<left>"", { noremap = true })
 vim.cmd([[ inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"<left>" ]])
-

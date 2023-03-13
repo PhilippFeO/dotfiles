@@ -1,77 +1,46 @@
-# Languages are matched via regex in function "comment_string", currently:
-#	lu = Lua
-#	py = Python
-#	sh = bash
-#	te = Text
-#	tex = TeX
 global !p
-def comment_string(language):
-	comment_string = ""
-	if language in ["py", "sh"]: # Python
-		comment_string = "# "
-	if language == "lu": # Lua
-		comment_string = "-- "
-	if language == "te": # (Plain) Text (empty, so nothing will be appended)
-		comment_string = ""
-	if language == "tex": # (Plain) Text (empty, so nothing will be appended)
-		comment_string = "% "
-	return comment_string
+from vimsnippets import get_comment_format
+LOREM = """
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod \
+tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At \
+vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, \
+no sea takimata sanctus est Lorem ipsum dolor sit amet.
+"""
 endglobal
+
 
 # Prints a line of fixed length.
 # ────────────────────────────────────────
 snippet '(lu|py|sh|te|tex)line' "Prints a simple line without Text" brA
-`!p snip.rv = comment_string(match.group(1)) + '─' * 40`
+`!p snip.rv = get_comment_format()[0] + ' ' + '─' * 40`
 endsnippet
 
 # Underlines a piece of text/comment for any of the specified languages.
 # ──────────────────────────────────────────────────────────────────────
 snippet '(lu|py|sh|te|tex)uline' "Nice underline for comments in specified programming language (s. all.snippets)" brA
-`!p snip.rv = comment_string(match.group(1))`$1
-`!p snip.rv = comment_string(match.group(1)) + '─' * len(t[1])`
-$0
+`!p snip.rv = get_comment_format()[0] + ' '`$1
+`!p snip.rv = get_comment_format()[0] + ' ' + '─' * len(t[1])`
 endsnippet
 
 # ─── Line with inline Text. ──────────
 snippet '(lu|py|sh|te|tex)inline' "Line with inline text in specified programming language (s. all.snippets)" brA
-`!p snip.rv = comment_string(match.group(1)) + '─' * 3` $1 `!p snip.rv = '─' * 10`
+`!p snip.rv = get_comment_format()[0] + ' ' + '─' * 3` $1 `!p snip.rv = '─' * 10`
 endsnippet
 
 # ┌──────────────────────────────────────────────────────────┐
 # │ Prints this nice box for any of the specified languages. │
 # └──────────────────────────────────────────────────────────┘
 snippet  '(lu|py|sh|te|tex)box' "Nice box for comments in specified programming language (s. all.snippets)" brA
-`!p snip.rv = comment_string(match.group(1)) + '┌' + '─' * (len(t[1]) + 2) + '┐'`
-`!p snip.rv = comment_string(match.group(1))`│ $1 │
-`!p snip.rv = comment_string(match.group(1)) + '└' + '─' * (len(t[1]) + 2) + '┘'# Hier gibt es manchmal Fehler`
-$0
+`!p snip.rv = get_comment_format()[0] + ' ' + '┌' + '─' * (len(t[1]) + 2) + '┐'`
+`!p snip.rv = get_comment_format()[0] + ' '`│ $1 │
+`!p snip.rv = get_comment_format()[0] + ' ' + '└' + '─' * (len(t[1]) + 2) + '┘'# Hier gibt es manchmal Fehler`
 endsnippet
 
 # ╭──────────────────────────────────────────────────────────────────────╮
 # │ Prints this nice box with rounded corners of the specidfied language │
 # ╰──────────────────────────────────────────────────────────────────────╯
 snippet  '(lu|py|sh|te|tex)rbox' "Nice box for comments in specified programming language (s. all.snippets)" brA
-`!p snip.rv = comment_string(match.group(1)) + '╭' + '─' * (len(t[1]) + 2) + '╮'`
-`!p snip.rv = comment_string(match.group(1))`│ $1 │
-`!p snip.rv = comment_string(match.group(1)) + '╰' + '─' * (len(t[1]) + 2) + '╯'# Hier gibt es manchmal Fehler`
-$0
+`!p snip.rv = get_comment_format()[0] + ' ' + '╭' + '─' * (len(t[1]) + 2) + '╮'`
+`!p snip.rv = get_comment_format()[0] + ' '`│ $1 │
+`!p snip.rv = get_comment_format()[0] + ' ' + '╰' + '─' * (len(t[1]) + 2) + '╯'# Hier gibt es manchmal Fehler`
 endsnippet
-
-
-# Backup snippets
-# ───────────────
-# ┌────────────────────────────────────────────────────┐
-# │ The following snippets generates these nice boxes. │
-# └────────────────────────────────────────────────────┘
-# snippet ntbox "A nice Box for plain text." bA
-# `!p snip.rv = '┌' + '─' * (len(t[1]) + 2) + '┐'`
-# │ $1 │
-# `!p snip.rv = '└' + '─' * (len(t[1]) + 2) + '┘'`
-# $0
-# endsnippet
-# 
-# snippet ntline "A nice Box for plain text." bA
-# $1
-# `!p snip.rv = ' ' + '─' * len(t[1])`
-# $0
-# endsnippet
