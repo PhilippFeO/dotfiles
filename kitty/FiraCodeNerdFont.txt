@@ -1,0 +1,28 @@
+# Config file for kitty-terminal.
+# This file enables and controls the Fira Code Nerd Font font.
+
+font_family      Fira Code Retina Nerd Font Complete
+bold_font        Fira Code Bold Nerd Font Complete
+italic_font      Victor Mono SemiBold Italic Nerd Font Complete
+# used by kitty, for instance for terminal tabs
+bold_italic_font auto
+
+
+# Font Features, Stylistic Sets
+# ─────────────────────────────
+# $ kitty + list-fonts --psnames | grep "Fira Code Regular"
+#     Fira Code Regular (FiraCode-Regular)
+#  => Use "FiraCode-Regular" for <font_features> option
+
+# +cv06 rounded i 
+# +cv13 Zero with vertical line 0  
+# +cv16 6 beamed asterisk *  
+# +cv18 percentage with dots not circles % 
+# +cv30 longer pipe/vertical bar | 
+# +cv31 circled parenthesis () 
+# +ss01 r with less serifs
+# +ss04 $ without strike through
+# +ss06 \\\s thin backslash in escape sequences
+# +ss10 Fl Tl fi fj fl ft additional Ligatures
+
+font_features FiraCodeNerdFontComplete-Retina +cv06 +cv13 +cv16 +cv18 +cv30 +cv31 +ss01 +ss04 +ss06

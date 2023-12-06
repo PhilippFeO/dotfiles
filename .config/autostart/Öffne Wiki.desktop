@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=kitty --config /home/philipp/.config/kitty/wiki.conf --session /home/philipp/.config/kitty/wiki-session.conf
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[de_DE]=Öffne Wiki
+Comment[de_DE]=Öffne mein Wiki
+X-GNOME-Autostart-Delay=3

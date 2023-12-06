@@ -1,0 +1,1 @@
+/home/philipp/programmieren/skripte/download_VictorMonoNerdFont.sh

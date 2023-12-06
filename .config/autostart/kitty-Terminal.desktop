@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=kitty
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[de_DE]=kitty-Terminal
+Comment[de_DE]=Keine Beschreibung
+X-GNOME-Autostart-Delay=0

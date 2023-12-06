@@ -1,0 +1,7 @@
+# Config file for kitty-terminal.
+# This file enables and controls the Victor Mono font.
+
+font_family      Victor Mono SemiBold Nerd Font Complete
+bold_font        Victor Mono Bold Nerd Font Complete
+italic_font      Victor Mono SemiBold Italic Nerd Font Complete
+bold_italic_font Fira Code Medium

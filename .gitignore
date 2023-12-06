@@ -1,0 +1,4 @@
+.stignore
+*.tar
+*.tar.gz
+nvim/

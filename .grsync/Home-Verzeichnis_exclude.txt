@@ -1,0 +1,10 @@
+.local/share/Trash
+.icons
+.themes
+.cache
+.var
+programmieren/overview
+.venv
+\.git/***
+Downloads
+.VirtualBox

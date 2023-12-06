@@ -1,0 +1,44 @@
+DP-2 Height 2560x1440=1381
+DP-2 Width 2560x1440=1280
+DP-2 XPosition 2560x1440=1280
+DP-2 YPosition 2560x1440=59
+State=AAAA/wAAAAD9AAAAAAAABQAAAAUpAAAABAAAAAQAAAAIAAAACPwAAAADAAAAAQAAAAEAAAAsAHEAdQBpAGMAawBBAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHICAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAIgBhAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAA==
+
+[Desktop Entry]
+FullScreen=false
+
+[MainWindow]
+DP-2 Height 2560x1440=1021
+DP-2 Width 2560x1440=960
+DP-2 XPosition 2560x1440=8
+DP-2 YPosition 2560x1440=68
+State=AAAA/wAAAAD9AAAAAAAABQAAAAUpAAAABAAAAAQAAAAIAAAACPwAAAADAAAAAQAAAAEAAAAsAHEAdQBpAGMAawBBAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHICAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAIgBhAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAA==
+ToolBarsMovable=Disabled
+eDP-1 DP-2 XPosition 2560x1440=50
+eDP-1 DP-2 YPosition 2560x1440=82
+eDP-1 Height 1920x1080=1021
+eDP-1 Width 1920x1080=960
+eDP-1 XPosition 1920x1080=6
+eDP-1 YPosition 1920x1080=59
+
+[Recent Files]
+File1[$e]=$HOME/Dokumente/Bewerbungen/Retarus-JuniorJavaDeveloperWithFocusOnDataAnalysis/out/Retarus-JJDwFoDA.pdf
+File10[$e]=$HOME/Dokumente/Bewerbungen/msg-JuniorITConsultantCustomerAnalyticsStatisticsNewDataSolutions/Stellenanzeige.pdf
+File2[$e]=$HOME/Dokumente/Bewerbungen/Absagen/msg-JuniorCloudDataEngineerNewDataSolutions/msg-JCDENDS.pdf
+File3[$e]=$HOME/Dokumente/Bewerbungen/DBSystel-JuniorFullstackEntwickler/out/DBSystel-JFE.pdf
+File4[$e]=$HOME/programmieren/python/earth-observation/satellite_imagery/README.md
+File5[$e]=$HOME/Dokumente/Wohnung/Stintzingstraße 29, 91052 Erlangen/Kündigung/Kündigung.pdf
+File6[$e]=$HOME/Dokumente/Bewerbungen/Retarus-JuniorJavaDeveloperWithFocusOnDataAnalysis/CV_PhilippRost.pdf
+File7[$e]=$HOME/Dokumente/Siemens/Arbeitszeugnis_Siemens.pdf
+File8[$e]=$HOME/Dokumente/Bewerbungen/Retarus-JuniorJavaDeveloperWithFocusOnDataAnalysis/Retarus-JJDwFoDA.pdf
+File9[$e]=$HOME/Dokumente/Bewerbungen/Retarus-JuniorJavaDeveloperWithFocusOnDataAnalysis/Stellenanzeige.pdf
+Name1[$e]=Retarus-JJDwFoDA.pdf
+Name10[$e]=Stellenanzeige.pdf
+Name2[$e]=msg-JCDENDS.pdf
+Name3[$e]=DBSystel-JFE.pdf
+Name4[$e]=README.md
+Name5[$e]=Kündigung.pdf
+Name6[$e]=CV_PhilippRost.pdf
+Name7[$e]=Arbeitszeugnis_Siemens.pdf
+Name8[$e]=Retarus-JJDwFoDA.pdf
+Name9[$e]=Stellenanzeige.pdf

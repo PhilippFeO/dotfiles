@@ -1,0 +1,40 @@
+2023/12/05 21:40:01 [6310] building file list
+2023/12/05 21:41:35 [6310] skipping non-regular file ".tagebuch/transfer_path"
+2023/12/05 21:41:35 [6310] *deleting   dotfiles/nvim/lua/lsp-settings.lua
+2023/12/05 21:43:04 [6310] .d..t...... .keepassxc/
+2023/12/05 21:43:04 [6310] >fcst...... .keepassxc/Passwörter.kdbx
+2023/12/05 21:43:04 [6310] >fcst...... dotfiles/.bash_aliases
+2023/12/05 21:43:04 [6310] .d..t...... dotfiles/.config/autostart/
+2023/12/05 21:43:04 [6310] >f+++++++++ dotfiles/.config/autostart/kitty-Terminal.desktop
+2023/12/05 21:43:04 [6310] .d..t...... dotfiles/.config/nemo/
+2023/12/05 21:43:04 [6310] >fc.t...... dotfiles/.config/nemo/desktop-metadata
+2023/12/05 21:43:04 [6310] >fcst...... dotfiles/.grsync/grsync.ini
+2023/12/05 21:43:04 [6310] .d..t...... dotfiles/.grsync/logs/
+2023/12/05 21:43:04 [6310] >fcst...... dotfiles/.grsync/logs/DotfilesPasswörterTagebuchWiki.log
+2023/12/05 21:43:06 [6310] >fcst...... dotfiles/.grsync/logs/Home-Verzeichnis.log
+2023/12/05 21:43:06 [6310] .d..t...... dotfiles/nvim/
+2023/12/05 21:43:06 [6310] .d..t...... dotfiles/nvim/after/plugin/
+2023/12/05 21:43:06 [6310] >fcst...... dotfiles/nvim/after/plugin/mason.lua
+2023/12/05 21:43:06 [6310] .d..t...... dotfiles/nvim/lua/
+2023/12/05 21:43:06 [6310] >f+++++++++ dotfiles/nvim/lua/lsp-keymaps.lua
+2023/12/05 21:43:06 [6310] .d..t...... dotfiles/nvim/lua/lazy/
+2023/12/05 21:43:06 [6310] >fcst...... dotfiles/nvim/lua/lazy/ultisnips.lua
+2023/12/05 21:43:06 [6310] .d..t...... wiki/
+2023/12/05 21:43:06 [6310] >f+++++++++ wiki/Rewe.md
+2023/12/05 21:43:06 [6310] >fcst...... wiki/git branch branches zweige.md
+2023/12/05 21:43:06 [6310] >f+++++++++ wiki/git fetch.md
+2023/12/05 21:43:06 [6310] >fcst...... wiki/git merge files.md
+2023/12/05 21:43:06 [6310] >f+++++++++ wiki/git pull.md
+2023/12/05 21:43:06 [6310] >fcst...... wiki/git rebase.md
+2023/12/05 21:43:06 [6310] .d..t...... wiki/Finanzen/
+2023/12/05 21:43:06 [6310] >f+++++++++ wiki/Finanzen/strom energie kosten berechnen verbrauch kwh kilowatt steuer geld finanzen.md
+2023/12/05 21:43:06 [6310] .d..t...... wiki/Kochen/Rezepte/
+2023/12/05 21:43:06 [6310] >fcst...... wiki/Kochen/Rezepte/Holunderblütensirup.md
+2023/12/05 21:43:06 [6310] >fcst...... wiki/Kochen/Rezepte/Vanille-Eis.md
+2023/12/05 21:43:06 [6310] .d..t...... wiki/Neovim/
+2023/12/05 21:43:06 [6310] >fcst...... wiki/Neovim/neovim lsp language server protocol mason tag jump list.md
+2023/12/05 21:43:12 [6310] .d..t...... wiki/Neovim/Plugins/
+2023/12/05 21:43:12 [6310] .d..t...... wiki/Python/
+2023/12/05 21:43:12 [6310] >fcst...... wiki/Python/CSV.md
+2023/12/05 21:43:12 [6310] sent 10.133.174 bytes  received 826 bytes  52.919,06 bytes/sec
+2023/12/05 21:43:12 [6310] total size is 1.594.009.399  speedup is 157,29
