@@ -6,4 +6,4 @@ NoDisplay=false
 Hidden=false
 Name[de_DE]=Öffne Wiki
 Comment[de_DE]=Öffne mein Wiki
-X-GNOME-Autostart-Delay=3
+X-GNOME-Autostart-Delay=1

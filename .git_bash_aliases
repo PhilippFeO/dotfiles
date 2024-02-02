@@ -1,0 +1,27 @@
+alias ga='git add' # For single files
+alias gac='gaa && gc' # Es gibt auch "git commit [-a|--all]" aber dann muss man die Commit-Nachricht umständlicher eingeben
+alias gaf='git add `fzf`'
+alias gap='git add --patch'
+alias gapf='git add --patch `fzf`'
+
+alias gb='git branch -vv' # -vv displays also upstream branches
+
+alias gc='git commit -m'
+alias gca='git commit --amend --no-edit'
+
+alias gco='git checkout'
+
+alias gd='git diff'
+alias gdf='git diff `fzf`'
+
+alias gl='git log --graph -15'
+alias glc='git log --graph' # [g]it [l]og [c]omplete (as graph)
+alias gla='glc --all -15' # [g]it [l]og --[a]ll
+
+alias grs='git restore --staged' # git [unstage|us]
+alias gs='git status'
+alias gpush='git push'
+alias gpfwl='git push --force-with-lease'
+
+
+# vim:filetype=sh

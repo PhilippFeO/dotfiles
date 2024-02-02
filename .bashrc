@@ -129,7 +129,7 @@ PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\
 
 
 # <up INTEGER> um INTEGER Verzeichnisse hochzuspringen, anstatt cd ../../.. für 3 einfach up 3
-function up {
+up() {
     [ "${1/[^0-9]/}" == "$1" ] && {
         local ups=""
         for i in $(seq 1 $1)
@@ -199,6 +199,7 @@ alias config-clear='dpkg -l | grep "^rc " | cut -d" " -f3 | xargs dpkg --purge'
 source ~/.config/bash/key-bindings.bash
 source ~/.config/bash/completion.bash
 
+export FZF_DEFAULT_OPTS="--color=16 --reverse"
 # Modified standard command for fzf. Added by the indentation arguments.
 # These are directories I never will visit by command line.
 export FZF_DEFAULT_COMMAND="find * -path '*/\.*' -prune \
@@ -211,3 +212,24 @@ export FZF_DEFAULT_COMMAND="find * -path '*/\.*' -prune \
 # Variables
 export EDITOR='nvim'
 export SUDO_EDITOR='nvim'
+
+# ╭─────────╮
+# │ Aliases │
+# ╰─────────╯
+# Edit corresponding bash_alias files and source it after editing
+ba() {
+    if [[ "$1" = "n" || "$1" = "nvim" ]]; then 
+        nvim ~/dotfiles/.nvim_bash_aliases
+    elif [[ "$1" == "g" || "$1" == "git" ]]; then
+        n ~/dotfiles/.git_bash_aliases
+    fi
+    source ~/.bashrc
+}
+
+if [ -f ~/dotfiles/.git_bash_aliases ]; then
+    . ~/dotfiles/.git_bash_aliases
+fi
+
+if [ -f ~/dotfiles/.nvim_bash_aliases ]; then
+    . ~/dotfiles/.nvim_bash_aliases
+fi
