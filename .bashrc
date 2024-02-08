@@ -216,6 +216,7 @@ export SUDO_EDITOR='nvim'
 pushall() {
     commit_msg="[DLR] Automatic Commit"
     for dir in ~/wiki ~/dotfiles; do
+        echo '--- $dir ---'
         cd $dir
         git checkout dlr
         git add .
