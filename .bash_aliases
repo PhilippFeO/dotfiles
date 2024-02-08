@@ -63,5 +63,5 @@ alias rewe='firefox --profile ~/.mozilla/firefox/5mud7ety.Rewe/'
 alias tmp='cd /tmp'
 alias baum="ls -R | grep ":$" | perl -pe 's/:$//;s/[^-][^\/]*\//    /g;s/^    (\S)/└── \1/;s/(^    |    (?= ))/│   /g;s/    (\S)/└── \1/'"
 alias wiki='cd ~/wiki/'
-alias zug='date >> zugarbeitszeiten.txt'
+alias zug='date "+%d.%m.%Y %H:%M" >> zugarbeitszeiten.txt'
 
