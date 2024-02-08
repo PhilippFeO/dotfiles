@@ -212,6 +212,19 @@ export FZF_DEFAULT_COMMAND="find * -path '*/\.*' -prune \
 export EDITOR='nvim'
 export SUDO_EDITOR='nvim'
 
+# Repository function
+pushall() {
+    commit_msg="[DLR] Automatic Commit"
+    for dir in ~/wiki ~/dotfiles; do
+        cd $dir
+        git checkout dlr
+        git add .
+        git commit -m "$commit_msg"
+        # git push origin dlr
+    done
+}
+
+
 # ╭─────────╮
 # │ Aliases │
 # ╰─────────╯
@@ -231,4 +244,8 @@ fi
 
 if [ -f ~/dotfiles/.nvim_bash_aliases ]; then
     . ~/dotfiles/.nvim_bash_aliases
+fi
+
+if [ -f ~/.dlr_bash_aliases ]; then
+    . ~/.dlr_bash_aliases
 fi
