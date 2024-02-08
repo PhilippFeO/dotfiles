@@ -214,15 +214,19 @@ export SUDO_EDITOR='nvim'
 
 # Repository function
 pushall() {
+    org_pwd=$(pwd)
     commit_msg="[DLR] Automatic Commit"
-    for dir in ~/wiki ~/dotfiles; do
+    printf '\n'
+    for dir in ./wiki ./dotfiles; do
         echo '--- '$dir' ---'
-        cd $dir
+        cd ~/$dir
         git checkout dlr
         git add .
         git commit -m "$commit_msg"
         # git push origin dlr
+        printf '\n'
     done
+    cd $org_pwd
 }
 
 
