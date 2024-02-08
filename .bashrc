@@ -223,7 +223,7 @@ pushall() {
         git checkout dlr
         git add .
         git commit -m "$commit_msg"
-        # git push origin dlr
+        git push origin dlr
         printf '\n'
     done
     cd $org_pwd
