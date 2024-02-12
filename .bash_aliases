@@ -54,6 +54,7 @@ alias c='xclip -selection clipboard'
 alias charge-full='conservation-mode-off'
 alias conservation-mode-off='echo 0 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode'
 alias conservation-mode-on='echo 1 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode'
+alias er='cd ~/programmieren/recipe-selector/; find recipes/ misc/ -name "*.yaml" | n `fzf`; cd - > /dev/null' # er = edit recipe
 alias karte='telnet mapscii.me'
 alias map='telnet mapscii.me'
 alias op='okular *.pdf'
