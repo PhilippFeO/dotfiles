@@ -214,6 +214,7 @@ export SUDO_EDITOR='nvim'
 
 # Repository function
 pushall() {
+    echo "nvim/ fehlt!"
     org_pwd=$(pwd)
     commit_msg="[DLR] Automatic Commit"
     printf '\n'
