@@ -11,6 +11,7 @@ ln -f .bashrc ~/.bashrc
 ln -f .profile ~/.profile
 
 # fzf
+# Are files in ~/.config/bash/ sourced in .bashrc?
 apt install fzf
 ln -s bash/ ~/.config/bash/
 
