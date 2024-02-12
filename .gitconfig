@@ -1,3 +1,25 @@
+[branch]
+	verbose = true
 [user]
-	email = rost.philipp@protonmail.com
-	name = Philipp Rost
+	email = 125358469+PhilippFeO@users.noreply.github.com
+	name = PhilippFeO
+[log]
+	date = relative
+	; date = short
+[format]
+	; >(N) Padding links einfügen
+	; <(N) rechts
+	pretty = format:%C(auto)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN %Creset%s %C(auto)%d 
+[alias]
+	ac = commit -am
+	am = commit --amend --no-edit
+	co = checkout
+	lg = log --graph
+	pullom = pull origin main
+	pushom = push origin main
+	unstage = restore --staged
+	us = unstage
+[init]
+	defaultBranch = main
+[status]
+	submoduleSummary = 1
