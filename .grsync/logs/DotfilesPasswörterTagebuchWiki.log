@@ -1,40 +1,111 @@
-2023/12/05 21:40:01 [6310] building file list
-2023/12/05 21:41:35 [6310] skipping non-regular file ".tagebuch/transfer_path"
-2023/12/05 21:41:35 [6310] *deleting   dotfiles/nvim/lua/lsp-settings.lua
-2023/12/05 21:43:04 [6310] .d..t...... .keepassxc/
-2023/12/05 21:43:04 [6310] >fcst...... .keepassxc/Passwörter.kdbx
-2023/12/05 21:43:04 [6310] >fcst...... dotfiles/.bash_aliases
-2023/12/05 21:43:04 [6310] .d..t...... dotfiles/.config/autostart/
-2023/12/05 21:43:04 [6310] >f+++++++++ dotfiles/.config/autostart/kitty-Terminal.desktop
-2023/12/05 21:43:04 [6310] .d..t...... dotfiles/.config/nemo/
-2023/12/05 21:43:04 [6310] >fc.t...... dotfiles/.config/nemo/desktop-metadata
-2023/12/05 21:43:04 [6310] >fcst...... dotfiles/.grsync/grsync.ini
-2023/12/05 21:43:04 [6310] .d..t...... dotfiles/.grsync/logs/
-2023/12/05 21:43:04 [6310] >fcst...... dotfiles/.grsync/logs/DotfilesPasswörterTagebuchWiki.log
-2023/12/05 21:43:06 [6310] >fcst...... dotfiles/.grsync/logs/Home-Verzeichnis.log
-2023/12/05 21:43:06 [6310] .d..t...... dotfiles/nvim/
-2023/12/05 21:43:06 [6310] .d..t...... dotfiles/nvim/after/plugin/
-2023/12/05 21:43:06 [6310] >fcst...... dotfiles/nvim/after/plugin/mason.lua
-2023/12/05 21:43:06 [6310] .d..t...... dotfiles/nvim/lua/
-2023/12/05 21:43:06 [6310] >f+++++++++ dotfiles/nvim/lua/lsp-keymaps.lua
-2023/12/05 21:43:06 [6310] .d..t...... dotfiles/nvim/lua/lazy/
-2023/12/05 21:43:06 [6310] >fcst...... dotfiles/nvim/lua/lazy/ultisnips.lua
-2023/12/05 21:43:06 [6310] .d..t...... wiki/
-2023/12/05 21:43:06 [6310] >f+++++++++ wiki/Rewe.md
-2023/12/05 21:43:06 [6310] >fcst...... wiki/git branch branches zweige.md
-2023/12/05 21:43:06 [6310] >f+++++++++ wiki/git fetch.md
-2023/12/05 21:43:06 [6310] >fcst...... wiki/git merge files.md
-2023/12/05 21:43:06 [6310] >f+++++++++ wiki/git pull.md
-2023/12/05 21:43:06 [6310] >fcst...... wiki/git rebase.md
-2023/12/05 21:43:06 [6310] .d..t...... wiki/Finanzen/
-2023/12/05 21:43:06 [6310] >f+++++++++ wiki/Finanzen/strom energie kosten berechnen verbrauch kwh kilowatt steuer geld finanzen.md
-2023/12/05 21:43:06 [6310] .d..t...... wiki/Kochen/Rezepte/
-2023/12/05 21:43:06 [6310] >fcst...... wiki/Kochen/Rezepte/Holunderblütensirup.md
-2023/12/05 21:43:06 [6310] >fcst...... wiki/Kochen/Rezepte/Vanille-Eis.md
-2023/12/05 21:43:06 [6310] .d..t...... wiki/Neovim/
-2023/12/05 21:43:06 [6310] >fcst...... wiki/Neovim/neovim lsp language server protocol mason tag jump list.md
-2023/12/05 21:43:12 [6310] .d..t...... wiki/Neovim/Plugins/
-2023/12/05 21:43:12 [6310] .d..t...... wiki/Python/
-2023/12/05 21:43:12 [6310] >fcst...... wiki/Python/CSV.md
-2023/12/05 21:43:12 [6310] sent 10.133.174 bytes  received 826 bytes  52.919,06 bytes/sec
-2023/12/05 21:43:12 [6310] total size is 1.594.009.399  speedup is 157,29
+2024/01/09 19:06:27 [17117] building file list
+2024/01/09 19:07:59 [17117] skipping non-regular file ".tagebuch/transfer_path"
+2024/01/09 19:07:59 [17117] *deleting   dotfiles/nvim.tar.gz
+2024/01/09 19:09:30 [17117] *deleting   wiki/neovim vim api.md
+2024/01/09 19:09:30 [17117] *deleting   wiki/git reset restore revert dinge zurücknehmen undoing things.md
+2024/01/09 19:09:30 [17117] .d..t...... .keepassxc/
+2024/01/09 19:09:30 [17117] >fcst...... .keepassxc/Passwörter.kdbx
+2024/01/09 19:09:30 [17117] .d..t...... dotfiles/
+2024/01/09 19:09:30 [17117] >fcst...... dotfiles/.bash_aliases
+2024/01/09 19:09:30 [17117] >f+++++++++ dotfiles/fugitive.lua
+2024/01/09 19:09:30 [17117] .d..t...... dotfiles/.config/autostart/
+2024/01/09 19:09:30 [17117] >fcst...... dotfiles/.config/autostart/kitty-Terminal.desktop
+2024/01/09 19:09:30 [17117] .d..t...... dotfiles/.config/nemo/
+2024/01/09 19:09:30 [17117] >fc.t...... dotfiles/.config/nemo/desktop-metadata
+2024/01/09 19:09:30 [17117] >fcst...... dotfiles/.grsync/grsync.ini
+2024/01/09 19:09:30 [17117] .d..t...... dotfiles/.grsync/logs/
+2024/01/09 19:09:30 [17117] >fcst...... dotfiles/.grsync/logs/DotfilesPasswörterTagebuchWiki.log
+2024/01/09 19:09:30 [17117] .d..t...... dotfiles/nvim/
+2024/01/09 19:09:30 [17117] >fcst...... dotfiles/nvim/.gitignore
+2024/01/09 19:09:30 [17117] >f+++++++++ dotfiles/nvim/Neovim-Startausrüstung.pdf
+2024/01/09 19:09:30 [17117] >fcst...... dotfiles/nvim/init.lua
+2024/01/09 19:09:30 [17117] .d..t...... dotfiles/nvim/after/plugin/
+2024/01/09 19:09:30 [17117] >f+++++++++ dotfiles/nvim/after/plugin/lualine.lua
+2024/01/09 19:09:30 [17117] >fc.t...... dotfiles/nvim/after/plugin/mason.lua
+2024/01/09 19:09:30 [17117] >fcst...... dotfiles/nvim/after/plugin/telescope.lua
+2024/01/09 19:09:30 [17117] .d..t...... dotfiles/nvim/compiler/
+2024/01/09 19:09:30 [17117] >f+++++++++ dotfiles/nvim/compiler/parse_python_error.sh
+2024/01/09 19:09:30 [17117] >fcst...... dotfiles/nvim/compiler/python.lua
+2024/01/09 19:09:30 [17117] .d..t...... dotfiles/nvim/ftplugin/
+2024/01/09 19:09:30 [17117] >f+++++++++ dotfiles/nvim/ftplugin/fugitive.lua
+2024/01/09 19:09:30 [17117] >f+++++++++ dotfiles/nvim/ftplugin/git.lua
+2024/01/09 19:09:30 [17117] >fcst...... dotfiles/nvim/ftplugin/markdown.lua
+2024/01/09 19:09:30 [17117] .d..t...... dotfiles/nvim/lua/lazy/
+2024/01/09 19:09:30 [17117] >fcst...... dotfiles/nvim/lua/lazy/lualine.lua
+2024/01/09 19:09:30 [17117] cd+++++++++ dotfiles/nvim/minimal_configs/
+2024/01/09 19:09:30 [17117] >f+++++++++ dotfiles/nvim/minimal_configs/init-wiki-WinkLinkNext.lua
+2024/01/09 19:09:30 [17117] .d..t...... dotfiles/nvim/misc/
+2024/01/09 19:09:30 [17117] >f+++++++++ dotfiles/nvim/misc/lualine.lua
+2024/01/09 19:09:30 [17117] .d..t...... dotfiles/nvim/plugin/
+2024/01/09 19:09:30 [17117] >fcst...... dotfiles/nvim/plugin/autocommands.lua
+2024/01/09 19:09:30 [17117] >fcst...... dotfiles/nvim/plugin/keymaps.lua
+2024/01/09 19:09:30 [17117] .d..t...... dotfiles/nvim/projects/telescope-filelinks.nvim/lua/filelinks/
+2024/01/09 19:09:30 [17117] .d..t...... dotfiles/nvim/schnipsel/
+2024/01/09 19:09:30 [17117] >fcst...... dotfiles/nvim/schnipsel/markdown.snippets
+2024/01/09 19:09:30 [17117] >fcst...... dotfiles/nvim/schnipsel/markdown_wiki.snippets
+2024/01/09 19:09:30 [17117] .d..t...... dotfiles/nvim/schnipsel/all/
+2024/01/09 19:09:30 [17117] .d..t...... wiki/
+2024/01/09 19:09:30 [17117] >fcst...... wiki/Einrichtung_meines_PCs.md
+2024/01/09 19:09:30 [17117] >fc.t...... wiki/Erdbeobachtung.md
+2024/01/09 19:09:30 [17117] >fcst...... wiki/Finanzen.md
+2024/01/09 19:09:30 [17117] >f+++++++++ wiki/GNU parallel.md
+2024/01/09 19:09:30 [17117] >fc.t...... wiki/Immun_–_Kurzgesagt.md
+2024/01/09 19:09:30 [17117] >fc.t...... wiki/Kochen.md
+2024/01/09 19:09:33 [17117] >fc.t...... wiki/LaTeX.md
+2024/01/09 19:09:33 [17117] >fc.t...... wiki/Linux.md
+2024/01/09 19:09:33 [17117] >fc.t...... wiki/Mathematik.md
+2024/01/09 19:09:33 [17117] >fcst...... wiki/Neovim.md
+2024/01/09 19:09:33 [17117] >fcst...... wiki/Notizen.md
+2024/01/09 19:09:33 [17117] >fc.t...... wiki/Programmieren.md
+2024/01/09 19:09:33 [17117] >fcst...... wiki/Python.md
+2024/01/09 19:09:33 [17117] >fcst...... wiki/Rewe.md
+2024/01/09 19:09:33 [17117] >f+++++++++ wiki/gcc.md
+2024/01/09 19:09:33 [17117] >fcst...... wiki/git .git verzeichnis directory.md
+2024/01/09 19:09:33 [17117] >fcst...... wiki/git branch branches zweige.md
+2024/01/09 19:09:33 [17117] >fcst...... wiki/git commit.md
+2024/01/09 19:09:33 [17117] >fcst...... wiki/git fetch.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/git hooks.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/git log.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/git rebase.md
+2024/01/09 19:09:34 [17117] >f+++++++++ wiki/git reset restore revert.md
+2024/01/09 19:09:34 [17117] >f+++++++++ wiki/git submodules inner repos.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/git.md
+2024/01/09 19:09:34 [17117] >fc.t...... wiki/latex anführungszeichen gänsefüßchen quotation marks csquotes babel.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/linux skripte scripting return exit codes bash sh.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/neovim api.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/neovim autocommands.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/neovim compiler makeprg make.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/neovim diagnostics telescope lsp.md
+2024/01/09 19:09:34 [17117] >fc.t...... wiki/neovim help hilfe.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/neovim highlight groups syntax treesitter.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/neovim key mapping tastaturkürzel.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/neovim lsp language server protocol mason tag jump list highlight group telescope.md
+2024/01/09 19:09:34 [17117] >fc.t...... wiki/neovim lua in neovim.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/neovim markdown.md
+2024/01/09 19:09:34 [17117] >f+++++++++ wiki/neovim minimal working configuration example.md
+2024/01/09 19:09:34 [17117] >f+++++++++ wiki/neovim mode modes.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/neovim normal mode normalmodus.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/neovim plugins lazy.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/neovim practical vim.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/neovim quickfix make makeprg compiler errorformat.md
+2024/01/09 19:09:34 [17117] >fc.t...... wiki/neovim rechtschreibkorrektur spell checking spellfile.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/neovim registers register.md
+2024/01/09 19:09:34 [17117] >f+++++++++ wiki/neovim vim-api.md
+2024/01/09 19:09:34 [17117] >fcst...... wiki/reddit.md
+2024/01/09 19:09:34 [17117] >f+++++++++ wiki/vimgolf.md
+2024/01/09 19:09:34 [17117] .d..t...... wiki/Anhänge/
+2024/01/09 19:09:37 [17117] >f+++++++++ wiki/Anhänge/GNU Parallel – Ole Tange.pdf
+2024/01/09 19:09:37 [17117] .d..t...... wiki/Finanzen/
+2024/01/09 19:09:37 [17117] >fcst...... wiki/Finanzen/Steuer.md
+2024/01/09 19:09:37 [17117] >fcst...... wiki/Finanzen/strom energie kosten berechnen verbrauch kwh kilowatt steuer geld finanzen.md
+2024/01/09 19:09:37 [17117] .d..t...... wiki/Kochen/
+2024/01/09 19:09:37 [17117] >fcst...... wiki/Kochen/Rezepte.md
+2024/01/09 19:09:40 [17117] .d..t...... wiki/Neovim/
+2024/01/09 19:09:40 [17117] >fcst...... wiki/Neovim/neovim fugitive git plugin.md
+2024/01/09 19:09:40 [17117] .d..t...... wiki/Neovim/Plugins/
+2024/01/09 19:09:40 [17117] >fcst...... wiki/Neovim/Plugins/lazy.nvim.md
+2024/01/09 19:09:40 [17117] >fcst...... wiki/Neovim/Plugins/wiki.vim.md
+2024/01/09 19:09:40 [17117] cd+++++++++ wiki/journal/
+2024/01/09 19:09:40 [17117] >f+++++++++ wiki/journal/2024-01-05.md
+2024/01/09 19:09:40 [17117] sent 2.931.310 bytes  received 2.094 bytes  15.159,71 bytes/sec
+2024/01/09 19:09:40 [17117] total size is 1.601.963.918  speedup is 546,11

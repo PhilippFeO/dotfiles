@@ -1,4 +1,0 @@
-.keepassxc
-.tagebuch
-dotfiles
-wiki
