@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=kitty --config /home/philipp/.config/kitty/wiki.conf --session /home/philipp/.config/kitty/wiki-session.conf
+Exec=kitty --start-as=fullscreen --config /home/philipp/.config/kitty/wiki.conf --session /home/philipp/.config/kitty/wiki-session.conf
 X-GNOME-Autostart-enabled=true
 NoDisplay=false
 Hidden=false

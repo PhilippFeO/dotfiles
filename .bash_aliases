@@ -24,6 +24,7 @@ alias rs='cd ~/programmieren/recipe-selector/; source ~/.venv/recipe-selector/bi
 # └───────────────┘
 alias ..='cd ..'
 alias lk='ls -AFl --group-directories-first'
+alias lkl='lk -L'
 
 # ┌───────────┐
 # │ TryHackMe │
