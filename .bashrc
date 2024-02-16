@@ -211,8 +211,8 @@ export FZF_DEFAULT_COMMAND="find * -path '*/\.*' -prune \
     -o -type f -print -o -type l -print 2> /dev/null"
 
 # Variables
-export EDITOR='nvim.appimage'
-export SUDO_EDITOR='nvim.appimage'
+export EDITOR='nvim'
+export SUDO_EDITOR='nvim'
 
 # Repository function
 pushall() {
