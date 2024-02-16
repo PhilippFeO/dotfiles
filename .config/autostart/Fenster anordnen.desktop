@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/philipp/dotfiles/move-windows/move-windows.sh
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[de_DE]=Fenster anordnen
+Comment[de_DE]=Ordne Fenster richtig an
+X-GNOME-Autostart-Delay=0

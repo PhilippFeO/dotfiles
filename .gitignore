@@ -2,3 +2,4 @@
 *.tar
 *.tar.gz
 nvim/
+.grsync/logs/

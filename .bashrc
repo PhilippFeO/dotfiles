@@ -216,11 +216,9 @@ export SUDO_EDITOR='nvim.appimage'
 
 # Repository function
 pushall() {
-    echo "nvim/ fehlt!"
     org_pwd=$(pwd)
     commit_msg="[DLR] Automatic Commit"
-    printf '\n'
-    for dir in ./wiki ./dotfiles; do
+    for dir in ./wiki ./dotfiles ./dotfiles/nvim; do
         echo '--- '$dir' ---'
         cd ~/$dir
         git checkout dlr
@@ -229,6 +227,7 @@ pushall() {
         git push origin dlr
         printf '\n'
     done
+    # `cd -` not possible, because dir is changed multiple times due to loop
     cd $org_pwd
 }
 

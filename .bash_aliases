@@ -24,6 +24,7 @@ alias rs='cd ~/programmieren/recipe-selector/; source ~/.venv/recipe-selector/bi
 # └───────────────┘
 alias ..='cd ..'
 alias lk='ls -AFl --group-directories-first'
+alias lkl='lk -L'
 
 # ┌───────────┐
 # │ TryHackMe │
@@ -54,6 +55,7 @@ alias c='xclip -selection clipboard'
 alias charge-full='conservation-mode-off'
 alias conservation-mode-off='echo 0 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode'
 alias conservation-mode-on='echo 1 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode'
+alias bdt='date "+%d.%m.%Y %H:%M"' # [b]etter [d]ate [t]ime
 alias er='cd ~/programmieren/recipe-selector/; find recipes/ misc/ -name "*.yaml" | n `fzf`; cd - > /dev/null' # er = edit recipe
 alias karte='telnet mapscii.me'
 alias map='telnet mapscii.me'
