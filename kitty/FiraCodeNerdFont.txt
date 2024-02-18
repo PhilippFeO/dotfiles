@@ -14,8 +14,11 @@ bold_italic_font auto
 #     Fira Code Regular (FiraCode-Regular)
 #  => Use "FiraCode-Regular" for <font_features> option
 
+# Complete List: https://github.com/tonsky/FiraCode
 # +cv06 rounded i 
-# +cv13 Zero with vertical line 0  
+# +cv13 Zero with vertical line 0
+# +zero Zero with dot
+# +cv14 edgey 3
 # +cv16 6 beamed asterisk *  
 # +cv18 percentage with dots not circles % 
 # +cv30 longer pipe/vertical bar | 
@@ -24,5 +27,6 @@ bold_italic_font auto
 # +ss04 $ without strike through
 # +ss06 \\\s thin backslash in escape sequences
 # +ss10 Fl Tl fi fj fl ft additional Ligatures
+# +onum verying height of numbers; Not convinced, some numbers are inline with lower case letters and harder to distinguish
 
-font_features FiraCodeNerdFontComplete-Retina +cv06 +cv13 +cv16 +cv18 +cv30 +cv31 +ss01 +ss04 +ss06
+font_features FiraCodeNerdFontComplete-Retina +cv06 +zero +cv14 +cv16 +cv18 +cv30 +cv31 +ss01 +ss04 +ss06 +ss10
