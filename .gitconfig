@@ -28,3 +28,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+; [editor]
+; 	config = nvim.appimage
+[core]
+	editor = nvim.appimage
