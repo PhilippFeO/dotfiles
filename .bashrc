@@ -239,3 +239,7 @@ fi
 if [ -f ~/.dlr_bash_aliases ]; then
     . ~/.dlr_bash_aliases
 fi
+# Add ssh keys
+eval $(ssh-agent -s) > /dev/null
+ssh-add ~/.ssh/dlr-gitlab > /dev/null
+ssh-add ~/.ssh/github > /dev/null
