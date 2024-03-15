@@ -1,6 +1,6 @@
 alias nvim='nvim.appimage'
 alias lazy='cd ~/.local/share/nvim/lazy/'
-alias mann='~/programmieren/skripte/nvim-man.sh' # Man page in Neovim (has syntax highlighting)
+alias mann='~/proj/scripts/nvim-man.sh' # Man page in Neovim (has syntax highlighting)
 alias n='nvim'
 alias nc='cd ~/dotfiles/nvim' # Change into ~/dotfiles/nvim
 alias ncf='nc; nf'
