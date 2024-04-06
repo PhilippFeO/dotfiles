@@ -18,7 +18,7 @@ alias nt='n *.tex' # Open *.tex files
 alias no='nvim "+colorscheme kanagawa-lotus"'
 alias nof='no `fzf`'
 
-alias rgqf='rg --vimgrep --column --no-heading'
+alias rgqf='rg --vimgrep'
 alias qf='rgqf'
 
 # vim:filetype=sh 
