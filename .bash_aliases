@@ -1,6 +1,3 @@
-
-
-
 # ┌───────────────┐
 # │ File browsing │
 # └───────────────┘
@@ -27,6 +24,7 @@ alias charge-full='conservation-mode-off'
 alias conservation-mode-off='echo 0 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode'
 alias conservation-mode-on='echo 1 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode'
 alias bdt='date "+%d.%m.%Y %H:%M"' # [b]etter [d]ate [t]ime
+alias jctl='journalctl --user -u'
 alias karte='telnet mapscii.me'
 alias map='telnet mapscii.me'
 alias n='vim'
