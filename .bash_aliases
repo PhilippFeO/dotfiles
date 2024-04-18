@@ -54,6 +54,7 @@ alias op='okular *.pdf'
 alias py='python3'
 alias python='python3'
 alias rewe='firefox --profile ~/.mozilla/firefox/5mud7ety.Rewe/ shop.rewe.de'
+alias rgqf='rg --vimgrep'
 alias tmp='cd /tmp'
 alias baum="ls -R | grep ":$" | perl -pe 's/:$//;s/[^-][^\/]*\//    /g;s/^    (\S)/└── \1/;s/(^    |    (?= ))/│   /g;s/    (\S)/└── \1/'"
 alias wiki='cd ~/wiki/'
