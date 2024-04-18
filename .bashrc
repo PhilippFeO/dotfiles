@@ -214,23 +214,6 @@ export FZF_DEFAULT_COMMAND="find * -path '*/\.*' -prune \
 export EDITOR='nvim'
 export SUDO_EDITOR='nvim'
 
-# Repository function
-pushall() {
-    org_pwd=$(pwd)
-    commit_msg="[DLR] Automatic Commit"
-    for dir in ./wiki ./dotfiles ./dotfiles/nvim; do
-        echo '--- '$dir' ---'
-        cd ~/$dir
-        git checkout dlr
-        git add .
-        git commit -m "$commit_msg"
-        git push origin dlr
-        printf '\n'
-    done
-    # `cd -` not possible, because dir is changed multiple times due to loop
-    cd $org_pwd
-}
-
 
 # ╭─────────╮
 # │ Aliases │
@@ -256,3 +239,7 @@ fi
 if [ -f ~/.dlr_bash_aliases ]; then
     . ~/.dlr_bash_aliases
 fi
+# Add ssh keys
+eval $(ssh-agent -s) > /dev/null
+ssh-add ~/.ssh/dlr-gitlab 2> /dev/null
+ssh-add ~/.ssh/github 2> /dev/null

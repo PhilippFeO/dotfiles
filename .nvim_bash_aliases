@@ -1,16 +1,16 @@
 # alias nvim='nvim.appimage'
 alias lazy='cd ~/.local/share/nvim/lazy/'
-alias mann='~/programmieren/skripte/nvim-man.sh' # Man page in Neovim (has syntax highlighting)
+alias mann='~/proj/scripts/nvim-man.sh' # Man page in Neovim (has syntax highlighting)
 alias n='nvim'
 alias nc='cd ~/dotfiles/nvim' # Change into ~/dotfiles/nvim
 alias ncf='nc; nf'
 alias nf='n `fzf`' # Open Neovim with fzf
 alias ngit='n -c "Git | only"' # start Neovim with vim-fugitive's git status open
-alias nh='nvim -c "lua require('\'lua.telescope_utils\'').my_help_tags()"'
+alias nh='nvim -c "lua require('\'telescope_utils\'').my_help_tags()"'
 alias ni='cd ~/dotfiles/nvim/ && n init.lua' # Edit 'init.lua'
-alias nlsp='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1'
 alias nm='n -c "Telescope man_pages"'
 alias np='cd ~/dotfiles/nvim/projects'
+alias ns='n -S'
 alias nt='n *.tex' # Open *.tex files
 # Nutze LaTeX-Konfiguration
 #alias nviml='if [ ! -f .latexmkrc ]; then lnlatexmkrc; else echo "File ~/LaTeX/.latexmkrc already present (physically or as link)."; fi && nvim -u ~/dotfiles/nvim/init-latex.lua'
@@ -18,7 +18,7 @@ alias nt='n *.tex' # Open *.tex files
 alias no='nvim "+colorscheme kanagawa-lotus"'
 alias nof='no `fzf`'
 
-alias rgqf='rg --vimgrep --column --no-heading'
+alias rgqf='rg --vimgrep'
 alias qf='rgqf'
 
 # vim:filetype=sh 

@@ -1,0 +1,14 @@
+# Alle Optionen mit Beispielen:
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+# BasedOnStyle: LLVM
+IndentWidth: 4
+ColumnLimit: 120
+# AlignAfterOpenBracket: Align
+# AlignArrayOfStructures: Right
+# AlignConsecutiveAssignments:
+#   Enabled: true
+#   AcrossEmptyLines: true
+#   AcrossComments: true
+#   AlignCompound: true
+BreakBeforeBraces: Allman

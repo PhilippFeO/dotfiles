@@ -26,23 +26,12 @@ alias ..='cd ..'
 alias lk='ls -AFl --group-directories-first'
 alias lkl='lk -L'
 
-# ┌───────────┐
-# │ TryHackMe │
-# └───────────┘
-alias tryhackme='sudo openvpn ~/Dokumente/TryHackMe.ovpn'
-alias thm-firefox='firefox -P TryHackMe https://tryhackme.com/login &' # Starte Firefox mit dem TryHackMe-Profil, bei dem NoScript deaktiviert und uBlock-Origin passend eingestellt ist (gegenwärtig sehe ich in NoScript keine Möglichkeit Ausnahmen in NoScripts für Tabs zu speichern und ich möchte die Seiten nicht allgemein erlauben, bzw. nur im TryHackMe-Profil, das ich ausschließlich für TryHackMe nutze)
-
 # ┌─────────┐
 # │ Weather │
 # └─────────┘
 alias wetter='curl v2d.wttr.in/Augsburg | less -Ru' # v2d uses Nerd font, not Emoji font (v2)
 alias wetter-einfach='curl wttr.in/Augsburg'
 
-# ┌───────┐
-# │ LaTeX │
-# └───────┘
-alias lnlatexmkrc='ln ~/latex/.latexmkrc $(pwd)'
-alias latex-compile='~/latex/compile.sh'
 
 # ┌──────┐
 # │ Misc │
@@ -57,8 +46,10 @@ alias conservation-mode-off='echo 0 | sudo tee /sys/bus/platform/drivers/ideapad
 alias conservation-mode-on='echo 1 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode'
 alias bdt='date "+%d.%m.%Y %H:%M"' # [b]etter [d]ate [t]ime
 alias er='cd ~/programmieren/grocery-shopper/; find recipes/ misc/ -name "*.yaml" | n `fzf`; cd - > /dev/null' # er = edit recipe
+alias jctl='journalctl --user -u'
 alias karte='telnet mapscii.me'
 alias map='telnet mapscii.me'
+alias n='vim'
 alias op='okular *.pdf'
 alias py='python3'
 alias python='python3'

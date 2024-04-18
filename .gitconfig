@@ -1,8 +1,8 @@
 [branch]
 	verbose = true
 [user]
-	email = 125358469+PhilippFeO@users.noreply.github.com
-	name = PhilippFeO
+	email = philipp.rost@dlr.de
+	name = Philipp Rost
 [log]
 	date = relative
 	; date = short
@@ -23,3 +23,12 @@
 	defaultBranch = main
 [status]
 	submoduleSummary = 1
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+; [editor]
+; 	config = nvim.appimage
+[core]
+	editor = nvim.appimage

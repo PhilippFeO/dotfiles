@@ -1,0 +1,18 @@
+[Unit]
+Description=Pull repositories on boot: wiki, dotfiles, nvim.
+DefaultDependencies=no
+# Unit is executed before the startup of the units below
+# According to the internet this means on boot
+After=network-online.target push-repos.service
+
+[Service]
+# Not really understood
+Type=oneshot
+ExecStart=/localhome/rost_ph/proj/scripts/pull-repos.sh
+# https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html#TimeoutSec=
+# TimeoutStopSec funktioniert nicht, habe ich wohl nicht verstanden
+TimeoutSec=15
+
+[Install]
+# Creates symlinks but purpose not understood
+RequiredBy=default.target 
