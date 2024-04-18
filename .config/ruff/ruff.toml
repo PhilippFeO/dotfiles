@@ -1,0 +1,4 @@
+line-length = 150 # Used by E501 (pycodestyle)
+
+[lint]
+select = ["E", "W", "SIM"]
