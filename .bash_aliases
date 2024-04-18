@@ -17,7 +17,7 @@ alias mvf='mv `fzf` `fzf`'
 # │ Virtualenvs for Python │
 # └────────────────────────┘
 alias eo='cd ~/programmieren/python/earth-observation/satellite_imagery/; source ~/.venv/eo/bin/activate'
-alias rs='cd ~/programmieren/recipe-selector/; source ~/.venv/recipe-selector/bin/activate'
+alias rs='cd ~/programmieren/grocery-shopper/; source ~/.venv/recipe-selector/bin/activate'
 
 # ┌───────────────┐
 # │ File browsing │
@@ -56,13 +56,13 @@ alias charge-full='conservation-mode-off'
 alias conservation-mode-off='echo 0 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode'
 alias conservation-mode-on='echo 1 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode'
 alias bdt='date "+%d.%m.%Y %H:%M"' # [b]etter [d]ate [t]ime
-alias er='cd ~/programmieren/recipe-selector/; find recipes/ misc/ -name "*.yaml" | n `fzf`; cd - > /dev/null' # er = edit recipe
+alias er='cd ~/programmieren/grocery-shopper/; find recipes/ misc/ -name "*.yaml" | n `fzf`; cd - > /dev/null' # er = edit recipe
 alias karte='telnet mapscii.me'
 alias map='telnet mapscii.me'
 alias op='okular *.pdf'
 alias py='python3'
 alias python='python3'
-alias rewe='firefox --profile ~/.mozilla/firefox/5mud7ety.Rewe/'
+alias rewe='firefox --profile ~/.mozilla/firefox/5mud7ety.Rewe/ shop.rewe.de'
 alias tmp='cd /tmp'
 alias baum="ls -R | grep ":$" | perl -pe 's/:$//;s/[^-][^\/]*\//    /g;s/^    (\S)/└── \1/;s/(^    |    (?= ))/│   /g;s/    (\S)/└── \1/'"
 alias wiki='cd ~/wiki/'
