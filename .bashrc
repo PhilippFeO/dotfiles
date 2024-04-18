@@ -214,6 +214,9 @@ export FZF_DEFAULT_COMMAND="find * -path '*/\.*' -prune \
 export EDITOR='nvim'
 export SUDO_EDITOR='nvim'
 
+nqf() {
+    n -q <(rgqf "$1")
+}
 
 # ╭─────────╮
 # │ Aliases │
@@ -238,8 +241,8 @@ fi
 
 if [ -f ~/.dlr_bash_aliases ]; then
     . ~/.dlr_bash_aliases
+    # Add ssh keys
+    eval $(ssh-agent -s) > /dev/null
+    ssh-add ~/.ssh/dlr-gitlab 2> /dev/null
+    ssh-add ~/.ssh/github 2> /dev/null
 fi
-# Add ssh keys
-eval $(ssh-agent -s) > /dev/null
-ssh-add ~/.ssh/dlr-gitlab 2> /dev/null
-ssh-add ~/.ssh/github 2> /dev/null
