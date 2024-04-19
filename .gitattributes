@@ -1,0 +1,4 @@
+# Ich möchte manche Dateien nicht mit Arbeitsversion zusammenführen, da ich dann ständig Dinge in Dateien, die sich wasl. selten ändern, modifizieren müsste
+# https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes#_merge_strategies
+kitty/wiki-session.conf merge=ours
+.gitconfig merge=ours
