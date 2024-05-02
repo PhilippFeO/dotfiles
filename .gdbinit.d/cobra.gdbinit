@@ -1,5 +1,6 @@
 file ./upas-l2
-set args --so2 /home/sentinel5p-data/archive/L1B/2024/03/15/irradiance/OFFL/S5P_OFFL_L1B_IR_UVN_20240315T062230_20240315T080401_33268_03_020100_20240315T095524.nc /home/sentinel5p-data/archive/L1B/2024/03/15/33270/OFFL/S5P_OFFL_L1B_RA_BD3_20240315T094531_20240315T112702_33270_03_020100_20240315T131648.nc -b 2000 -n 10 -t 12 --alongtrack --aux-cloud $(find . -name "*L2__CLOUD*.nc" | sort -n | tail -n 1) --aux-o3 $(find . -name "*L2__O3*.nc" | sort -n | tail -n 1)
+set args --so2 /localhome/rost_ph/proj/upas-s5p/UPAS-L2/cobra_data/S5P_RPRO_L1B_IR_UVN_20190622T163826_20190622T181956_08758_03_020100_20220706T041803.nc /localhome/rost_ph/proj/upas-s5p/UPAS-L2/cobra_data/S5P_RPRO_L1B_RA_BD3_20190623T010555_20190623T024725_08763_03_020100_20220706T043411.nc -b 2000 -n 10 -t 1 --aux-cloud /localhome/rost_ph/proj/upas-s5p/UPAS-L2/cobra_data/S5P_RPRO_L2__CLOUD__20190623T010555_20190623T024725_08763_03_020401_20220928T212700.nc --aux-o3 /localhome/rost_ph/proj/upas-s5p/UPAS-L2/cobra_data/S5P_RPRO_L2__O3_____20190623T010555_20190623T024725_08763_03_020401_20221009T192826.nc --aux-tm5 "/localhome/rost_ph/proj/upas-s5p/UPAS-L2/cobra_data/S5P_OPER_AUX_CTMANA_20190623T000000_20190624T000000_20221224T013458.nc /localhome/rost_ph/proj/upas-s5p/UPAS-L2/cobra_data/S5P_OPER_AUX_CTMANA_20190624T000000_20190625T000000_20221224T020347.nc"
 
-break Physics::Cobra::Cobra::Cobra()
-run
+# break Physics::Cobra::inv_matrix_eigenvectors(dlib::matrix<float, 0l, 0l, dlib::memory_manager_stateless_kernel_1<char>, dlib::row_major_layout> const&)
+# break Physics::Cobra::Cobra::inv_matrix_eigenvectors()
+# run
