@@ -17,7 +17,7 @@ alias mvf='mv `fzf` `fzf`'
 # │ Virtualenvs for Python │
 # └────────────────────────┘
 alias eo='cd ~/programmieren/python/earth-observation/satellite_imagery/; source ~/.venv/eo/bin/activate'
-alias rs='cd ~/programmieren/grocery-shopper/; source ~/.venv/recipe-selector/bin/activate'
+alias rs='cd ~/programmieren/grocery-shopper/'
 
 # ┌───────────────┐
 # │ File browsing │
@@ -49,7 +49,7 @@ alias er='cd ~/programmieren/grocery-shopper/; find recipes/ misc/ -name "*.yaml
 alias jctl='journalctl --user -u'
 alias karte='telnet mapscii.me'
 alias map='telnet mapscii.me'
-alias n='vim'
+alias n='nvim'
 alias op='okular *.pdf'
 alias py='python3'
 alias python='python3'

@@ -2,3 +2,4 @@
 # https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes#_merge_strategies
 kitty/wiki-session.conf merge=ours
 .gitconfig merge=ours
+.nvim_bash_aliases merge=ours

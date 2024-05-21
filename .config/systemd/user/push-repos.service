@@ -10,7 +10,7 @@ Wants=network-online.target
 [Service]
 # Not really understood
 Type=oneshot
-ExecStart=/localhome/rost_ph/proj/scripts/push-repos.sh
+ExecStart=/home/philipp/programmieren/skripte/systemd/push-repos.sh
 # https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html#TimeoutSec=
 # TimeoutStopSec funktioniert nicht, habe ich wohl nicht verstanden
 # Ohne funktioniert es

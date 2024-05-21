@@ -8,7 +8,7 @@ After=network-online.target push-repos.service
 [Service]
 # Not really understood
 Type=oneshot
-ExecStart=/localhome/rost_ph/proj/scripts/pull-repos.sh
+ExecStart=/home/philipp/programmieren/skripte/systemd/pull-repos.sh
 # https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html#TimeoutSec=
 # TimeoutStopSec funktioniert nicht, habe ich wohl nicht verstanden
 TimeoutSec=15

@@ -1,8 +1,7 @@
 # alias nvim='nvim.appimage'
 alias lazy='cd ~/.local/share/nvim/lazy/'
 alias mann='~/proj/scripts/nvim-man.sh' # Man page in Neovim (has syntax highlighting)
-alias n='nvim.appimage'
-alias nvim='nvim.appimage'
+alias n='nvim'
 alias nc='cd ~/dotfiles/nvim' # Change into ~/dotfiles/nvim
 alias ncf='nc; nf'
 alias nf='n `fzf`' # Open Neovim with fzf
@@ -21,5 +20,8 @@ alias nof='no `fzf`'
 
 alias rgqf='rg --vimgrep'
 alias qf='rgqf'
+nqf() {
+    n -q <(rgqf "$1")
+}
 
 # vim:filetype=sh 

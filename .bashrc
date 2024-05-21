@@ -103,7 +103,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+    source ~/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -111,9 +111,9 @@ fi
 # sources /etc/bash.bash).
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
+    source /usr/share/bash-completion/bash_completion
   elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
+    source /etc/bash_completion
   fi
 fi
 
@@ -151,6 +151,30 @@ cl() {
         echo "bash: cl: $dir: Directory not found"
     fi
 }
+
+
+# Activate Virtualenv if present
+# https://stackoverflow.com/questions/45216663/how-to-automatically-activate-virtualenvs-when-cding-into-a-directory
+function cd() {
+    builtin cd "$@" || exit 1
+
+    # Check if String is empty
+    if [[ -z "$VIRTUAL_ENV" ]] ; then
+        # If env folder is found then activate the vitualenv
+        if [[ -d ./.venv ]] ; then
+            source ./.venv/*/bin/activate
+        fi
+    else
+        ## check the current folder belong to earlier VIRTUAL_ENV folder
+        # if yes then do nothing
+        # else deactivate
+        parentdir="$(dirname "$VIRTUAL_ENV")"
+        if [[ "$PWD"/ != "$parentdir"/* ]] ; then
+            deactivate
+        fi
+    fi
+}
+
 
 bewerbungd() {
     if (( $# != 1 )); then
@@ -214,9 +238,6 @@ export FZF_DEFAULT_COMMAND="find * -path '*/\.*' -prune \
 export EDITOR='nvim'
 export SUDO_EDITOR='nvim'
 
-nqf() {
-    n -q <(rgqf "$1")
-}
 
 # ╭─────────╮
 # │ Aliases │
@@ -232,17 +253,27 @@ ba() {
 }
 
 if [ -f ~/dotfiles/.git_bash_aliases ]; then
-    . ~/dotfiles/.git_bash_aliases
+    source ~/dotfiles/.git_bash_aliases
 fi
 
 if [ -f ~/dotfiles/.nvim_bash_aliases ]; then
-    . ~/dotfiles/.nvim_bash_aliases
+    source ~/dotfiles/.nvim_bash_aliases
 fi
 
 if [ -f ~/.dlr_bash_aliases ]; then
-    . ~/.dlr_bash_aliases
+    source ~/.dlr_bash_aliases
     # Add ssh keys
     eval $(ssh-agent -s) > /dev/null
     ssh-add ~/.ssh/dlr-gitlab 2> /dev/null
     ssh-add ~/.ssh/github 2> /dev/null
 fi
+
+# ╭───────────────────────────────────────╮
+# │ Syntax Completion for grocery_shopper │
+# ╰───────────────────────────────────────╯
+# I asked ChatGPT how to enable auto completion and for an explanation.
+_pycomplete() {
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=( $(find ~/programmieren/grocery-shopper/recipes/ -iname "*.yaml" -type f -exec basename {} \; | grep "^$cur") )
+}
+complete -F _pycomplete grocery_shopper

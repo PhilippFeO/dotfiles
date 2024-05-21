@@ -4,4 +4,3 @@ dotfiles
 wiki
 Dokumente
 programmieren/grocery-shopper/
-proj/grocery-shopper/

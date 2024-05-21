@@ -19,9 +19,10 @@
 	pushom = push origin main
 	unstage = restore --staged
 	us = unstage
+	ps = push
 [init]
 	defaultBranch = main
 [status]
 	submoduleSummary = 1
 [core]
-	editor = nvim.appimage
+	editor = nvim
