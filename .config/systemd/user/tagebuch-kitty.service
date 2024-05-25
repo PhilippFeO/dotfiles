@@ -1,0 +1,24 @@
+# https://unix.stackexchange.com/questions/734675/unable-to-run-git-commands-before-shutdown
+[Unit]
+Description=Öffne Kitte mit Tagebucheintrag
+# Unit is executed before the startup of the units below
+#reboot.target halt.target
+# Before=shutdown.target
+; After=network-online.target
+; Wants=network-online.target
+
+[Service]
+# Not really understood
+Type=oneshot
+; ExecStart=notify-send 'test'
+ExecStart=/home/philipp/.local/bin/kitty
+# https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html#TimeoutSec=
+# TimeoutStopSec funktioniert nicht, habe ich wohl nicht verstanden
+# Ohne funktioniert es
+; TimeoutSec=20
+
+[Install]
+# Creates symlinks but purpose not understood
+# Addtional options: reboot.target halt.target
+; WantedBy=shutdown.target 
+WantedBy=default.target
