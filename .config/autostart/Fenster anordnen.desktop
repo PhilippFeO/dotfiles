@@ -6,4 +6,4 @@ NoDisplay=false
 Hidden=false
 Name[de_DE]=Fenster anordnen
 Comment[de_DE]=Ordne Fenster richtig an
-X-GNOME-Autostart-Delay=0
+X-GNOME-Autostart-Delay=5
