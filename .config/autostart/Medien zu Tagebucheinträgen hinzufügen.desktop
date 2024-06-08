@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/philipp/.tagebuch/wrapper_transfer_files.sh
+X-GNOME-Autostart-enabled=false
+NoDisplay=false
+Hidden=false
+Name[de_DE]=Tagebuch: Medien hinzufügen
+Comment[de_DE]=Füge Mediendateien den jeweiligen Tagebucheinträgen hinzu
+X-GNOME-Autostart-Delay=2
