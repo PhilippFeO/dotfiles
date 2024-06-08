@@ -1,0 +1,1 @@
+/home/philipp/.tagebuch/.nemo/open_diary.sh
