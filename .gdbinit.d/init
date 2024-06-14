@@ -2,7 +2,7 @@ dashboard source -style height 15
 # !MODUL sorgt dafür, dass man MODUL erst hinzuschalten muss
 #   Man kann alle hier definierten per 'dashboard MODUL' an-/ausschalten
 # Reihenfolge hier entspricht der Dargestellten
-dashboard -layout expressions history source variables !stack !threads !breakpoints
+dashboard -layout expressions history source !variables !stack !threads !breakpoints
 
 # Load upas-s5p/cobra .gdbinit automatically
 # Loads this file always
