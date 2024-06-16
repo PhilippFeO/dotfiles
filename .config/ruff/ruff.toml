@@ -2,14 +2,29 @@
 
 [lint]
 select = [
-    "E", # pycodestyle
-    "W", # pycodestyle
-    "C4", # https://docs.astral.sh/ruff/rules/#flake8-comprehensions-c4
-    "SIM",
-    "TCH", # https://docs.astral.sh/ruff/rules/#flake8-type-checking-tch
+    # "E", # pycodestyle
+    # "W", # pycodestyle
+    # "C4", # https://docs.astral.sh/ruff/rules/#flake8-comprehensions-c4
+    # "SIM",
+    # "TCH", # https://docs.astral.sh/ruff/rules/#flake8-type-checking-tch
+    # "PT",
+    # "RET",
+    # "SLF",
+    # "TID",
+    # "INT",
+    "ALL"
 ]
 ignore = [
     "E501", # Ignore line length
+    "PT001", # Allow '@pytest.fixture' instead of '@pytest.fixture()'; https://docs.astral.sh/ruff/rules/pytest-fixture-incorrect-parentheses-style/
+    "ANN001", # Warnings on missing type hint in function signature
+    "ANN2", # Warnings on missing return type 
+    "Q000", # Use " over '
+    "D1", # Missing docstrings (in various places)
+    "FA", # Type annotations with backwards compatability for < Python3.9
+    "S101", # Warnings on use of 'assert', https://docs.astral.sh/ruff/rules/assert/
+    "ERA001", # Commented out code
+    "S603", # Prone to create false positives; https://docs.astral.sh/ruff/rules/subprocess-without-shell-equals-true/
 ]
 
 [lint.flake8-type-checking]
