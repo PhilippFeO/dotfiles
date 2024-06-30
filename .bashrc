@@ -169,7 +169,8 @@ function cd() {
         # if yes then do nothing
         # else deactivate
         parentdir="$(dirname "$VIRTUAL_ENV")"
-        if [[ "$PWD"/ != "$parentdir"/* ]] ; then
+        parentdir="$(dirname "$parentdir")"
+        if [[ "$PWD" != "$parentdir"* ]] ; then
             deactivate
         fi
     fi
