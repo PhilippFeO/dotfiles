@@ -18,6 +18,7 @@ alias mvf='mv `fzf` `fzf`'
 # └────────────────────────┘
 alias eo='cd ~/programmieren/python/earth-observation/satellite_imagery/; source ~/.venv/eo/bin/activate'
 alias rs='cd ~/programmieren/grocery-shopper/'
+alias dt='cd ~/programmieren/django-test/ && cd lorem_project/'
 
 # ┌───────────────┐
 # │ File browsing │
