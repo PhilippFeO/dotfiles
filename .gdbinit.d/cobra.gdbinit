@@ -5,9 +5,12 @@ set args -b 1500 -n 200 -t 1 --so2 /localhome/rost_ph/proj/upas-s5p/UPAS-L2/cobr
 # break Cobra.cpp:232 if diff < uX + 1
 
 # set record full insn-number-max 0
-# break Physics::Cobra::calc_scd_iter(blitz::Array<double, 2>&, blitz::Array<bool, 1>&, dlib::matrix<double, 0l, 0l, dlib::memory_manager_stateless_kernel_1<char>, dlib::row_major_layout>&, dlib::matrix<double, 0l, 0l, dlib::memory_manager_stateless_kernel_1<char>, dlib::row_major_layout>&, dlib::matrix<double, 0l, 0l, dlib::memory_manager_stateless_kernel_1<char>, dlib::row_major_layout>&, double, blitz::Array<double, 1>&, blitz::Array<double, 1>&, blitz::Array<double, 1>&)
-# break Physics::Cobra::Cobra::process(short const&, blitz::Array<short, 1> const&, blitz::Array<float, 2> const&, blitz::Array<float, 2> const&, blitz::Array<float, 1> const&, blitz::Array<float, 1> const&, blitz::Array<float, 1> const&, blitz::Array<float, 1>&, blitz::Array<float, 1>&, blitz::Array<float, 1>&, blitz::Array<unsigned char, 1>&)
+# calc_scd_iter
+break Physics::Cobra::calc_scd_iter(blitz::Array<double, 2>&, blitz::Array<bool, 1>&, dlib::matrix<double, 0l, 0l, dlib::memory_manager_stateless_kernel_1<char>, dlib::row_major_layout>&, dlib::matrix<double, 0l, 0l, dlib::memory_manager_stateless_kernel_1<char>, dlib::row_major_layout>&, dlib::matrix<double, 0l, 0l, dlib::memory_manager_stateless_kernel_1<char>, dlib::row_major_layout>&, double, blitz::Array<double, 1>&, blitz::Array<double, 1>&, blitz::Array<double, 1>&)
 
-break Physics::Cobra::smooth(blitz::Array<double, 1>&, int, blitz::Array<double, 1>&)
+# process
+#break Physics::Cobra::Cobra::process(short const&, blitz::Array<short, 1> const&, blitz::Array<float, 2> const&, blitz::Array<float, 2> const&, blitz::Array<float, 1> const&, blitz::Array<float, 1> const&, blitz::Array<float, 1> const&, blitz::Array<float, 1> const&, blitz::Array<float, 1>&, blitz::Array<float, 1>&, blitz::Array<float, 1>&, blitz::Array<unsigned char, 1>&)
 
-# run
+#break Physics::Cobra::smooth(blitz::Array<double, 1>&, int, blitz::Array<double, 1>&)
+
+#run
