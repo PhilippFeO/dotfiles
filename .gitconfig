@@ -20,6 +20,7 @@
 	unstage = restore --staged
 	us = unstage
 	ps = push
+	pfwl = push --force-with-lease
 [init]
 	defaultBranch = main
 [status]
