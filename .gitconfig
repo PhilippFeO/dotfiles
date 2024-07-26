@@ -17,6 +17,7 @@
 	lg = log --graph
 	pullom = pull origin main
 	pushom = push origin main
+	pfwl = push --force-with-lease
 	unstage = restore --staged
 	us = unstage
 [init]
