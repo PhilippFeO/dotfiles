@@ -13,7 +13,10 @@
 [alias]
 	ac = commit -am
 	am = commit --amend --no-edit
+	bd = branch -d
+	bdr = branch -dr
 	co = checkout
+	fo = fetch origin
 	lg = log --graph
 	pullom = pull origin main
 	pushom = push origin main
