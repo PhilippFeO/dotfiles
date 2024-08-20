@@ -18,6 +18,7 @@
 	co = checkout
 	fo = fetch origin
 	lg = log --graph
+	od = co origin/dev
 	pullom = pull origin main
 	pushom = push origin main
 	unstage = restore --staged

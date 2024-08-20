@@ -1,0 +1,1 @@
+/home/philipp/.tagebuch/wrapper_folder_to_diary.sh
