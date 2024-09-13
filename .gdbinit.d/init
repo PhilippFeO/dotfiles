@@ -6,7 +6,7 @@ dashboard -layout expressions history source !variables !stack !threads !breakpo
 
 # Load upas-s5p/cobra .gdbinit automatically
 # Loads this file always
-# This produces an omitted error because I use 'file PROGRAM' and may not exist
+# This produces an omitted error because I use 'file PROGRAM' which may not exist
 # add-auto-load-safe-path ~/proj/upas-s5p/UPAS-L2/build/verbose/cobra.gdbinit
 
 # Quit without confirmation
