@@ -21,6 +21,7 @@
 	od = co origin/dev
 	pullom = pull origin main
 	pushom = push origin main
+	pmd = push origin main main:dlr
 	unstage = restore --staged
 	us = unstage
 	ps = push
