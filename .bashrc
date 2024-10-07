@@ -152,6 +152,10 @@ cl() {
     fi
 }
 
+gitbd() {
+    git branch --delete "$1"
+    git branch --delete --remote origin/"$1"
+}
 
 # Activate Virtualenv if present
 # https://stackoverflow.com/questions/45216663/how-to-automatically-activate-virtualenvs-when-cding-into-a-directory
