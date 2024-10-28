@@ -8,6 +8,7 @@ alias nf='n `fzf`' # Open Neovim with fzf
 alias ngit='n -c "Git | only"' # start Neovim with vim-fugitive's git status open
 alias nh='nvim -c "lua require('\'telescope_utils\'').my_help_tags()"'
 alias ni='cd ~/dotfiles/nvim/ && n init.lua' # Edit 'init.lua'
+alias nil='n -c "Octo issue list"'
 alias nm='n -c "Telescope man_pages"'
 alias np='cd ~/dotfiles/nvim/projects'
 alias ns='n -S'
