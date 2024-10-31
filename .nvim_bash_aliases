@@ -18,6 +18,7 @@ alias nt='n *.tex' # Open *.tex files
 # When using Neovim outside
 alias no='nvim "+colorscheme kanagawa-lotus"'
 alias nof='no `fzf`'
+alias nr='cd ~/programmieren/grocery-shopper/recipes/ && n `fzf` && cd -'
 
 alias rgqf='rg --vimgrep'
 alias qf='rgqf'
