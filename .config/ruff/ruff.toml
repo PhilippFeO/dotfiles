@@ -26,6 +26,9 @@ ignore = [
     "ERA001", # Commented out code
     "S603", # Prone to create false positives; https://docs.astral.sh/ruff/rules/subprocess-without-shell-equals-true/
     "DTZ002", # Use of 'datetime.datetime.today()'; https://docs.astral.sh/ruff/rules/call-datetime-today/
+    "RUF012", # Mutable class attributes should be annotated with `typing.ClassVar`
+    "ANN002", # Missing Type Annotation for *args
+    "ANN003", # Missing Type Annotation for **kwargs
 ]
 
 [lint.flake8-type-checking]
