@@ -1,1 +1,7 @@
-/home/philipp/.tagebuch/.nemo/cp_fotos_diary.sh
+#!/bin/bash
+# nemo action for copying fotos in $@ into ~/.tagebuch/.tmp 
+
+for img in "$@"; do
+	# notify-send "img = $img"
+	cp "$img" ~/.tagebuch/.tmp/
+done

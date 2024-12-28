@@ -1,1 +1,12 @@
-/home/philipp/.tagebuch/folder_to_diary.nemo_action
+[Nemo Action]
+Active=true
+# Displayed Name in context menu
+# _ in front of letter indicates keyboard shortcut
+Name=CWD in Tagebuch einbetten
+Comment=Füge in Tagebucheintrag die Fotos des aktuellen Verzeichnisses hinzu
+# <> necessary if scripts lies in nemo/actions/
+Exec=<wrapper_folder_to_diary.sh>
+# Icon-Name=folder
+Selection=any
+Extensions=any;
+Quote=double
