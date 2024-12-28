@@ -186,8 +186,10 @@ bewerbungd() {
         echo "Name für tex-Datei fehlt."
     else
         cp ~/Dokumente/Lebenslauf/CV_PhilippRost-de.pdf .
+        cp ~/Dokumente/Bewerbungen/templates/de-application-template.tex "$1".tex
         ln ~/Dokumente/Bewerbungen/BScMathematik_MScInformatik.pdf .
-        cp ~/Dokumente/Bewerbungen/templates/de-application-template.tex $1.tex
+        ln "$HOME/Dokumente/Bewerbungen/Empfehlungsschreiben Philipp Rost.pdf" ./Empfehlungsschreiben_Surfverein.pdf
+        ln -s "$HOME/Dokumente/Zeugnisse_Urkunden_Zertifikate/Arbeitszeugnisse" ./Arbeitszeugnisse
     fi
 }
 
@@ -199,6 +201,11 @@ bewerbung() {
         cp ~/Dokumente/Lebenslauf/CV_PhilippRost.pdf .
         ln ~/Dokumente/Bewerbungen/BScMathematik_MScInformatik.pdf .
         cp ~/Dokumente/Bewerbungen/templates/application-template.tex $1.tex
+        ln "$HOME/Dokumente/Bewerbungen/Empfehlungsschreiben Philipp Rost.pdf" ./Empfehlungsschreiben_Surfverein.pdf
+        zeugnis_dir=/home/philipp/Dokumente/Zeugnisse_Urkunden_Zertifikate/Arbeitszeugnisse/
+        for zeugnis in "$zeugnis_dir"/*; do
+            ln "$zeugnis_dir/$zeugnis" ./"$zeugnis"
+        done
     fi
 }
 
