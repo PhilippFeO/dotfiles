@@ -12,7 +12,7 @@ alias nil='n -c "Octo issue list"'
 alias nm='n -c "Telescope man_pages"'
 alias np='cd ~/dotfiles/nvim/projects'
 alias ns='n -S'
-alias nt='n *.tex' # Open *.tex files
+alias ntex='n *.tex' # Open *.tex files
 # Nutze LaTeX-Konfiguration
 #alias nviml='if [ ! -f .latexmkrc ]; then lnlatexmkrc; else echo "File ~/LaTeX/.latexmkrc already present (physically or as link)."; fi && nvim -u ~/dotfiles/nvim/init-latex.lua'
 # When using Neovim outside
