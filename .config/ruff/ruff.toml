@@ -15,22 +15,28 @@ select = [
     "ALL"
 ]
 ignore = [
-    "E501", # Ignore line length
-    "PT001", # Allow '@pytest.fixture' instead of '@pytest.fixture()'; https://docs.astral.sh/ruff/rules/pytest-fixture-incorrect-parentheses-style/
     "ANN001", # Warnings on missing type hint in function signature
-    "ANN2", # Warnings on missing return type 
-    "Q000", # Use " over '
-    "D1", # Missing docstrings (in various places)
-    "FA", # Type annotations with backwards compatability for < Python3.9
-    "S101", # Warnings on use of 'assert', https://docs.astral.sh/ruff/rules/assert/
-    "ERA001", # Commented out code
-    "S603", # Prone to create false positives; https://docs.astral.sh/ruff/rules/subprocess-without-shell-equals-true/
-    "DTZ002", # Use of 'datetime.datetime.today()'; https://docs.astral.sh/ruff/rules/call-datetime-today/
-    "DTZ007", # Naive datetime constructed using `datetime.datetime.strptime()` without %z
-    "RUF012", # Mutable class attributes should be annotated with `typing.ClassVar`
     "ANN002", # Missing Type Annotation for *args
     "ANN003", # Missing Type Annotation for **kwargs
+    "ANN2", # Warnings on missing return type 
+    "D1", # Missing docstrings (in various places)
+    "DTZ002", # Use of 'datetime.datetime.today()'; https://docs.astral.sh/ruff/rules/call-datetime-today/
+    "DTZ007", # Naive datetime constructed using `datetime.datetime.strptime()` without %z
+    "E501", # Ignore line length
+    "ERA001", # Commented out code
+    "FA", # Type annotations with backwards compatability for < Python3.9
+    "PT001", # Allow '@pytest.fixture' instead of '@pytest.fixture()'; https://docs.astral.sh/ruff/rules/pytest-fixture-incorrect-parentheses-style/
+    "Q000", # Use " over '
+    "RUF012", # Mutable class attributes should be annotated with `typing.ClassVar`
+    "S101", # Warnings on use of 'assert', https://docs.astral.sh/ruff/rules/assert/
+    "S603", # Prone to create false positives; https://docs.astral.sh/ruff/rules/subprocess-without-shell-equals-true/
+    "T201", # `print()` found
 ]
+
+[lint.pylint]
+# https://docs.astral.sh/ruff/settings/#lint_pylint_max-statements
+# Related: https://docs.astral.sh/ruff/rules/too-many-statements/
+max-statements = 75
 
 [lint.flake8-type-checking]
 # Add quotes around type annotations, if doing so would allow
