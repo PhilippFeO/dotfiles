@@ -184,15 +184,19 @@ bewerbung_helper(){
     ln ~/Dokumente/Bewerbungen/BScMathematik_MScInformatik.pdf .
     ln "$HOME/Dokumente/Bewerbungen/Empfehlungsschreiben Philipp Rost.pdf" ./Empfehlungsschreiben_Surfverein.pdf
     ln -s "$HOME/Dokumente/Zeugnisse_Urkunden_Zertifikate/Arbeitszeugnisse" ./Arbeitszeugnisse
+    touch KI-Entwurf.md
+    echo "$1" > link.txt
 }
 
 bewerbungd() {
-    if (( $# != 1 )); then
-        echo "Name für tex-Datei fehlt."
+    if (( $# != 2 )); then
+        echo "Usage: bewerbungd NAME LINK"
     else
+        mkdir "$1"
+        cd "$1" || exit
         cp ~/Dokumente/Lebenslauf/CV_PhilippRost-de.pdf .
         cp ~/Dokumente/Bewerbungen/templates/de-application-template.tex "$1".tex
-        bewerbung_helper
+        bewerbung_helper "$2"
     fi
 }
 
