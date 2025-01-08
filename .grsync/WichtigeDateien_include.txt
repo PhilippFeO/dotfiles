@@ -3,4 +3,4 @@
 dotfiles
 wiki
 Dokumente
-programmieren/grocery-shopper/
+programmieren
