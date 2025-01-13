@@ -30,7 +30,7 @@ alias lkl='lk -L'
 # ┌─────────┐
 # │ Weather │
 # └─────────┘
-alias wetter='curl v2d.wttr.in/Augsburg | less -Ru' # v2d uses Nerd font, not Emoji font (v2)
+alias wetter='curl v2d.wttr.in/Augsburg | less -ru' # v2d uses Nerd font, not Emoji font (v2)
 alias wetter-einfach='curl wttr.in/Augsburg'
 
 
