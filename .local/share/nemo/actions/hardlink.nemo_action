@@ -9,8 +9,8 @@ Active=true
 Name=Harte Verknüpfung
 Comment=Lege eine harte Verknüpfung für die ausgewählte Datei an
 # <> necessary if scripts lies in nemo/actions/
-Exec=<Harter_Link.sh %F>
-# Icon-Name=folder
-Selection=any
-Extensions=any;
+Exec=<hardlink.sh %F>
+Icon-Name=link-symbolic
+Selection=notnone
+Extensions=nodirs;
 Quote=double

@@ -1,1 +1,0 @@
-/home/philipp/programmieren/skripte/nemo/erstelldatum.sh

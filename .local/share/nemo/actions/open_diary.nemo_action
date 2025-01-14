@@ -11,6 +11,7 @@ Comment=Öffne Tagebucheintrag
 # <> necessary if scripts lies in nemo/actions/
 # %U = file:// + absolute path
 Exec=<open_diary.sh %U>
-Selection=any
-Extensions=any;
+Icon=calendar
+Selection=notnone
+Extensions=.html;
 Quote=double
