@@ -2,6 +2,8 @@
 alias lazy='cd ~/.local/share/nvim/lazy/'
 alias mann='~/proj/scripts/nvim-man.sh' # Man page in Neovim (has syntax highlighting)
 alias n='nvim'
+# When using Neovim outside, [n]vim [b]right
+alias nb='nvim "+colorscheme kanagawa-lotus"'
 alias nc='cd ~/dotfiles/nvim' # Change into ~/dotfiles/nvim
 alias ncf='nc; nf'
 alias nf='n `fzf`' # Open Neovim with fzf
@@ -10,13 +12,12 @@ alias nh='nvim -c "lua require('\'telescope_utils\'').my_help_tags()"'
 alias ni='cd ~/dotfiles/nvim/ && n init.lua' # Edit 'init.lua'
 alias nil='n -c "Octo issue list"'
 alias nm='n -c "Telescope man_pages"'
+alias nO='n -O'
 alias np='cd ~/dotfiles/nvim/projects'
 alias ns='n -S'
 alias ntex='n *.tex' # Open *.tex files
 # Nutze LaTeX-Konfiguration
 #alias nviml='if [ ! -f .latexmkrc ]; then lnlatexmkrc; else echo "File ~/LaTeX/.latexmkrc already present (physically or as link)."; fi && nvim -u ~/dotfiles/nvim/init-latex.lua'
-# When using Neovim outside
-alias no='nvim "+colorscheme kanagawa-lotus"'
 alias nof='no `fzf`'
 alias nr='cd ~/programmieren/grocery-shopper/recipes/ && n `fzf` && cd -'
 
