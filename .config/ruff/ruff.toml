@@ -1,4 +1,55 @@
-line-length = 150 # Used by E501 (pycodestyle)
+# line-length = 150 # Used by E501 (pycodestyle)
 
 [lint]
-select = ["E", "W", "SIM"]
+select = [
+    # "E", # pycodestyle
+    # "W", # pycodestyle
+    # "C4", # https://docs.astral.sh/ruff/rules/#flake8-comprehensions-c4
+    # "SIM",
+    # "TCH", # https://docs.astral.sh/ruff/rules/#flake8-type-checking-tch
+    # "PT",
+    # "RET",
+    # "SLF",
+    # "TID",
+    # "INT",
+    "ALL"
+]
+ignore = [
+    "ANN001", # Warnings on missing type hint in function signature
+    "ANN002", # Missing Type Annotation for *args
+    "ANN003", # Missing Type Annotation for **kwargs
+    "ANN2", # Warnings on missing return type 
+    "D1", # Missing docstrings (in various places)
+    "DTZ002", # Use of 'datetime.datetime.today()'; https://docs.astral.sh/ruff/rules/call-datetime-today/
+    "DTZ007", # Naive datetime constructed using `datetime.datetime.strptime()` without %z
+    "E501", # Ignore line length
+    "ERA001", # Commented out code
+    "FA", # Type annotations with backwards compatability for < Python3.9
+    "PT001", # Allow '@pytest.fixture' instead of '@pytest.fixture()'; https://docs.astral.sh/ruff/rules/pytest-fixture-incorrect-parentheses-style/
+    "Q000", # Use " over '
+    "RUF012", # Mutable class attributes should be annotated with `typing.ClassVar`
+    "S101", # Warnings on use of 'assert', https://docs.astral.sh/ruff/rules/assert/
+    "S603", # Prone to create false positives; https://docs.astral.sh/ruff/rules/subprocess-without-shell-equals-true/
+    "T201", # `print()` found
+]
+
+[lint.pylint]
+# https://docs.astral.sh/ruff/settings/#lint_pylint_max-statements
+# Related: https://docs.astral.sh/ruff/rules/too-many-statements/
+max-statements = 75
+
+[lint.flake8-type-checking]
+# Add quotes around type annotations, if doing so would allow
+# an import to be moved into a type-checking block.
+quote-annotations = true
+
+[lint.flake8-quotes]
+inline-quotes = "single" # Respected by Q000
+
+[format]
+quote-style = "single" # Use '' for Strings
+
+[lint.per-file-ignores]
+# https://docs.astral.sh/ruff/settings/#per-file-ignores
+"__init__.py" = ["E402"]
+"*.ju.py" = ["B018"]
