@@ -184,8 +184,9 @@ bewerbung_helper(){
     ln ~/Dokumente/Bewerbungen/BScMathematik_MScInformatik.pdf .
     ln "$HOME/Dokumente/Bewerbungen/Empfehlungsschreiben Philipp Rost.pdf" ./Empfehlungsschreiben_Surfverein.pdf
     ln -s "$HOME/Dokumente/Zeugnisse_Urkunden_Zertifikate/Arbeitszeugnisse" ./Arbeitszeugnisse
-    touch KI-Entwurf.md
+    cp "$HOME/Dokumente/Bewerbungen/KI-Entwurf.txt" ./KI-Entwurf.txt
     echo "$1" > link.txt
+    curl "$1" > HTML-Stellenbeschreibung.html
 }
 
 bewerbungd() {
