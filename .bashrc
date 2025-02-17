@@ -218,6 +218,16 @@ nqf() {
     nvim.appimage -q <(rg --vimgrep "$1")
 }
 
+function nf {
+    file=$(fzf)
+    if [ "$1" = "-O" ]; then
+        file2=$(fzf)
+        nvim "$1" "$file" "$file2"
+    else
+        nvim "$@" "$file"
+    fi
+}
+
 # ╭─────────╮
 # │ Aliases │
 # ╰─────────╯
