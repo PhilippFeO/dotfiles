@@ -222,9 +222,9 @@ function nf {
     file=$(fzf)
     if [ "$1" = "-O" ]; then
         file2=$(fzf)
-        nvim "$1" "$file" "$file2"
+        nvim.appimage "$1" "$file" "$file2"
     else
-        nvim "$@" "$file"
+        nvim.appimage "$@" "$file"
     fi
 }
 
