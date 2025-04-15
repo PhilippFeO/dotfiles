@@ -14,6 +14,7 @@
 	ac = commit -am
 	am = commit --amend --no-edit
 	bd = branch -d
+	bD = branch -D
 	bdr = branch -dr
 	co = checkout
 	fo = fetch origin
@@ -25,7 +26,7 @@
 	unstage = restore --staged
 	us = unstage
 	ps = push
-	pfwl = push --force-with-lease
+	pfl = push --force-with-lease
 [init]
 	defaultBranch = main
 [status]
