@@ -153,7 +153,7 @@ cl() {
 }
 
 gitbd() {
-    git branch --delete "$1"
+    git branch -D "$1"
     git branch --delete --remote origin/"$1"
 }
 
