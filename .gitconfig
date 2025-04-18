@@ -17,6 +17,7 @@
 	bD = branch -D
 	bdr = branch -dr
 	co = checkout
+	cob = checkout -b
 	fo = fetch origin
 	lg = log --graph
 	od = co origin/dev
