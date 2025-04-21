@@ -18,6 +18,7 @@ alias mvf='mv `fzf` `fzf`'
 # └────────────────────────┘
 alias eo='cd ~/programmieren/python/earth-observation/satellite_imagery/; source ~/.venv/eo/bin/activate'
 alias rs='cd ~/programmieren/grocery-shopper/; source ~/.venv/recipe-selector/bin/activate'
+alias kv='cd ~/python/kursverwaltung/; source .venv/kv/bin/activate; cd kursverwaltung'
 
 # ┌───────────────┐
 # │ File browsing │
