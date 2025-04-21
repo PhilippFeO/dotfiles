@@ -22,6 +22,7 @@
 	pullom = pull origin main
 	pushom = push origin main
 	pfwl = push --force-with-lease
+	pfl = pfwl
 	unstage = restore --staged
 	us = unstage
 [init]
