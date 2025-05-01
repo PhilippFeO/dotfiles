@@ -1003,7 +1003,8 @@ editor nvim
 #: }}}
 
 #: OS specific tweaks {{{
-# wayland_titlebar_color background
+
+wayland_titlebar_color background
 
 #: Change the color of the kitty window's titlebar on Wayland systems
 #: with client side window decorations such as GNOME. A value of
@@ -1478,9 +1479,3 @@ map kitty_mod+backspace change_font_size all 0
 #: }}}
 
 #: }}}
-
-
-# BEGIN_KITTY_THEME
-# Kanagawa
-include current-theme.conf
-# END_KITTY_THEME
