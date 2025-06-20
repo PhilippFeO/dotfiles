@@ -203,12 +203,14 @@ bewerbungd() {
 
 
 bewerbung() {
-    if (( $# != 1 )); then
-        echo "Name für tex-Datei fehlt."
+    if (( $# != 2 )); then
+        echo "Usage: bewerbung NAME LINK"
     else
+        mkdir "$1"
+        cd "$1" || exit
         cp ~/Dokumente/Lebenslauf/CV_PhilippRost.pdf .
         cp ~/Dokumente/Bewerbungen/templates/application-template.tex "$1".tex
-        bewerbung_helper
+        bewerbung_helper "$2"
     fi
 }
 
