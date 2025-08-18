@@ -184,7 +184,6 @@ bewerbung_helper(){
     ln ~/Dokumente/Bewerbungen/BScMathematik_MScInformatik.pdf .
     ln "$HOME/Dokumente/Bewerbungen/Empfehlungsschreiben Philipp Rost.pdf" ./Empfehlungsschreiben_Surfverein.pdf
     ln -s "$HOME/Dokumente/Zeugnisse_Urkunden_Zertifikate/Arbeitszeugnisse" ./Arbeitszeugnisse
-    cp "$HOME/Dokumente/Bewerbungen/KI-Entwurf.txt" ./KI-Entwurf.txt
     echo "$1" > link.txt
     curl "$1" > HTML-Stellenbeschreibung.html
 }
@@ -197,6 +196,7 @@ bewerbungd() {
         cd "$1" || exit
         cp ~/Dokumente/Lebenslauf/CV_PhilippRost-de.pdf .
         cp ~/Dokumente/Bewerbungen/templates/de-application-template.tex "$1".tex
+        cp "$HOME/Dokumente/Bewerbungen/KI-Entwurf.txt" ./KI-Entwurf.txt
         bewerbung_helper "$2"
     fi
 }
@@ -210,6 +210,7 @@ bewerbung() {
         cd "$1" || exit
         cp ~/Dokumente/Lebenslauf/CV_PhilippRost.pdf .
         cp ~/Dokumente/Bewerbungen/templates/application-template.tex "$1".tex
+        cp ~/Dokumente/Bewerbungen/KI-Draft.txt ./KI-Draft.txt
         bewerbung_helper "$2"
     fi
 }
