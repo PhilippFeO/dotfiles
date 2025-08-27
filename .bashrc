@@ -162,6 +162,9 @@ gitbd() {
 function cd() {
     builtin cd "$@" || exit 1
 
+    if [ -f "./.aliases.sh" ]; then
+        source "./.aliases.sh"
+    fi
     # Check if String is empty
     if [[ -z "$VIRTUAL_ENV" ]] ; then
         # If env folder is found then activate the vitualenv
