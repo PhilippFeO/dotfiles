@@ -1,2 +1,4 @@
 \.git/***
 Dokumente/Verkauf
+'Dokumente/Vereine/Surffreunde Augsburg/Vorstellung Landessportgruppe Die Grünen.tar.gz'
+'Dokumente/Vereine/Surffreunde Augsburg/Bachablass Senkelbachwanderung 2025.tar.gz'
