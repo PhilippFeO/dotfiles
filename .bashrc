@@ -184,37 +184,64 @@ function cd() {
 }
 
 bewerbung_helper(){
-    ln ~/Dokumente/Bewerbungen/BScMathematik_MScInformatik.pdf .
-    ln "$HOME/Dokumente/Bewerbungen/Empfehlungsschreiben Philipp Rost.pdf" ./Empfehlungsschreiben_Surfverein.pdf
-    ln -s "$HOME/Dokumente/Zeugnisse_Urkunden_Zertifikate/Arbeitszeugnisse" ./Arbeitszeugnisse
-    echo "$1" > link.txt
-    curl "$1" > HTML-Stellenbeschreibung.html
+    corporation=$(echo "$1" | tr -d ' ')
+    position="$1"
+    # no whitespace
+    position_nws=$(echo "$2" | tr -d ' ')
+    full_name="$corporation-$position_nws"
+    link="$3"
+
+    mkdir "$full_name"
+
+    ln ~/Dokumente/Bewerbungen/BScMathematik_MScInformatik.pdf "./$full_name"
+    ln "$HOME/Dokumente/Bewerbungen/Empfehlungsschreiben Philipp Rost.pdf" "./$full_name/Empfehlungsschreiben_Surfverein.pdf"
+    ln -s "$HOME/Dokumente/Zeugnisse_Urkunden_Zertifikate/Arbeitszeugnisse" "./$full_name/Arbeitszeugnisse"
+
+    echo "$link" > "./$full_name/link.txt"
+    curl "$link" > "./$full_name/HTML-Stellenbeschreibung.html"
+
+    position_variables_file="./$full_name/position_variables.tex"
+    touch "$position_variables_file"
+    echo "\\newcommand{\\jobposition}{$position}" >>"./$full_name/position_variables.tex" 
+    if (( $# == 4 )); then
+        jobid="$4"
+        echo "\\newcommand{\\jobidpure}{$jobid}" >>"./$full_name/position_variables.tex" 
+    fi
+    echo "$full_name"
 }
 
 bewerbungd() {
-    if (( $# != 2 )); then
-        echo "Usage: bewerbungd NAME LINK"
+    if (( $# < 3 )); then
+        echo "Usage: bewerbungd CORPORATION POSITION LINK [ID]"
     else
-        mkdir "$1"
-        cd "$1" || exit
-        cp ~/Dokumente/Lebenslauf/CV_PhilippRost-de.pdf .
-        cp ~/Dokumente/Bewerbungen/templates/de-application-template.tex "$1".tex
-        cp "$HOME/Dokumente/Bewerbungen/KI-Entwurf.txt" ./KI-Entwurf.txt
-        bewerbung_helper "$2"
+        if (( $# == 4 )); then
+            full_name=$(bewerbung_helper "$1" "$2" "$3" "$4")
+        else
+            full_name=$(bewerbung_helper "$1" "$2" "$3")
+        fi
+        cp ~/Dokumente/Lebenslauf/CV_PhilippRost-de.pdf "./$full_name"
+        cp ~/Dokumente/Lebenslauf/CV_PhilippRost-de.tex "./$full_name"
+        cp ~/Dokumente/Bewerbungen/templates/application_de.tex "./$full_name/anschreiben_$full_name.tex"
+        cp ~/Dokumente/Bewerbungen/KI-Entwurf.txt "./$full_name/KI-Entwurf.txt"
+        cd "$full_name" || exit
     fi
 }
 
 
 bewerbung() {
-    if (( $# != 2 )); then
-        echo "Usage: bewerbung NAME LINK"
+    if (( $# < 3 )); then
+        echo "Usage: bewerbung CORPORATION POSITION LINK [ID]"
     else
-        mkdir "$1"
-        cd "$1" || exit
-        cp ~/Dokumente/Lebenslauf/CV_PhilippRost.pdf .
-        cp ~/Dokumente/Bewerbungen/templates/application-template.tex "$1".tex
-        cp ~/Dokumente/Bewerbungen/KI-Draft.txt ./KI-Draft.txt
-        bewerbung_helper "$2"
+        if (( $# == 4 )); then
+            full_name=$(bewerbung_helper "$1" "$2" "$3" "$4")
+        else
+            full_name=$(bewerbung_helper "$1" "$2" "$3")
+        fi
+        cp ~/Dokumente/Lebenslauf/CV_PhilippRost.pdf "./$full_name"
+        cp ~/Dokumente/Lebenslauf/CV_PhilippRost.tex "./$full_name"
+        cp ~/Dokumente/Bewerbungen/templates/application.tex "./$full_name/anschreiben_$full_name.tex"
+        cp ~/Dokumente/Bewerbungen/KI-Draft.txt "./$full_name/KI-Draft.txt"
+        cd "$full_name" || exit
     fi
 }
 
@@ -242,8 +269,8 @@ function cs {
 alias config-clear='dpkg -l | grep "^rc " | cut -d" " -f3 | xargs dpkg --purge'
 
 #export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
-source ~/.config/bash/key-bindings.bash
-source ~/.config/bash/completion.bash
+source "$HOME/.config/bash/key-bindings.bash"
+source "$HOME/.config/bash/completion.bash"
 
 export FZF_DEFAULT_OPTS="--color=16 --reverse"
 # Modified standard command for fzf. Added by the indentation arguments.
@@ -269,25 +296,25 @@ export SUDO_EDITOR='nvim'
 # Edit corresponding bash_alias files and source it after editing
 ba() {
     if [[ "$1" = "n" || "$1" = "nvim" ]]; then 
-        nvim ~/dotfiles/.nvim_bash_aliases
+        nvim "$HOME/dotfiles/.nvim_bash_aliases"
     elif [[ "$1" == "g" || "$1" == "git" ]]; then
-        n ~/dotfiles/.git_bash_aliases
+        n "$HOME/dotfiles/.git_bash_aliases"
     fi
-    source ~/.bashrc
+    source "$HOME/.bashrc"
 }
 
 if [ -f ~/dotfiles/.git_bash_aliases ]; then
-    source ~/dotfiles/.git_bash_aliases
+    source "$HOME/dotfiles/.git_bash_aliases"
 fi
 
 if [ -f ~/dotfiles/.nvim_bash_aliases ]; then
-    source ~/dotfiles/.nvim_bash_aliases
+    source "$HOME/dotfiles/.nvim_bash_aliases"
 fi
 
 if [ -f ~/.dlr_bash_aliases ]; then
-    source ~/.dlr_bash_aliases
+    source "$HOME/.dlr_bash_aliases"
     # Add ssh keys
-    eval $(ssh-agent -s) > /dev/null
+    eval "$(ssh-agent -s)" > /dev/null
     ssh-add ~/.ssh/dlr-gitlab 2> /dev/null
     ssh-add ~/.ssh/github 2> /dev/null
 fi
