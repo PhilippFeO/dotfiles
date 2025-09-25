@@ -185,7 +185,7 @@ function cd() {
 
 bewerbung_helper(){
     corporation=$(echo "$1" | tr -d ' ')
-    position="$1"
+    position="$2"
     # no whitespace
     position_nws=$(echo "$2" | tr -d ' ')
     full_name="$corporation-$position_nws"
@@ -205,7 +205,7 @@ bewerbung_helper(){
     echo "\\newcommand{\\jobposition}{$position}" >>"./$full_name/position_variables.tex" 
     if (( $# == 4 )); then
         jobid="$4"
-        echo "\\newcommand{\\jobidpure}{$jobid}" >>"./$full_name/position_variables.tex" 
+        echo "\\newcommand{\\jobid}{$jobid}" >>"./$full_name/position_variables.tex" 
     fi
     echo "$full_name"
 }
@@ -243,6 +243,10 @@ bewerbung() {
         cp ~/Dokumente/Bewerbungen/KI-Draft.txt "./$full_name/KI-Draft.txt"
         cd "$full_name" || exit
     fi
+}
+
+arbeitsamt() {
+    pdfunite stellenausschreibung.pdf anschreiben*.pdf CV_PhilippRost*.tex BScMathematik_MScInformatik.pdf Empfehlungsschreiben_Surfverein.pdf "gesamt_$(basename $PWD).pdf"
 }
 
 # ╭──────────────────╮
