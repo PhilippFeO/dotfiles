@@ -16,4 +16,7 @@ for FILE in "$@"; do
       zenity --info --text="Error for $FILE."
       exit 1
    fi
+   # Rename file to include CreateDate info
+   filename=$(basename -- "$FILE")
+   mv "$FILE" "$(dirname "$FILE")""/${filename%.*}__CD_$DATE.${filename##*.}"
 done
