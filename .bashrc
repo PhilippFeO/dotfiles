@@ -203,6 +203,7 @@ bewerbung_helper(){
     position_variables_file="./$full_name/position_variables.tex"
     touch "$position_variables_file"
     echo "\\newcommand{\\jobposition}{$position}" >>"./$full_name/position_variables.tex" 
+    echo ">>>> $#"
     if (( $# == 4 )); then
         jobid="$4"
         echo "\\newcommand{\\jobid}{$jobid}" >>"./$full_name/position_variables.tex" 
