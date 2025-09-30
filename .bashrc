@@ -247,7 +247,15 @@ bewerbung() {
 }
 
 arbeitsamt() {
-    pdfunite stellenausschreibung.pdf anschreiben*.pdf CV_PhilippRost*.tex BScMathematik_MScInformatik.pdf Empfehlungsschreiben_Surfverein.pdf "gesamt_$(basename $PWD).pdf"
+    current_month_name=$(date "+%b")
+    mkdir -p "$current_month_name"
+    for d in "$@"; do
+        # Use subshell to avoid to cd back (via cd ..); Suggested by SpellCheck: https://www.shellcheck.net/wiki/SC2103
+        (
+        cd "$d" || exit; 
+        pdfunite anschreiben*.pdf CV_PhilippRost*.pdf BScMathematik_MScInformatik.pdf Empfehlungsschreiben_Surfverein.pdf stellenausschreibung.pdf "gesamt_$(basename "$PWD").pdf"
+        )
+    done   
 }
 
 # ╭──────────────────╮
