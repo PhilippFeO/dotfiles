@@ -253,7 +253,9 @@ arbeitsamt() {
         # Use subshell to avoid to cd back (via cd ..); Suggested by SpellCheck: https://www.shellcheck.net/wiki/SC2103
         (
         cd "$d" || exit; 
-        pdfunite anschreiben*.pdf CV_PhilippRost*.pdf BScMathematik_MScInformatik.pdf Empfehlungsschreiben_Surfverein.pdf stellenausschreibung.pdf "gesamt_$(basename "$PWD").pdf"
+        final_pdf_file="gesamt_$(basename "$PWD").pdf"
+        pdfunite anschreiben*.pdf CV_PhilippRost*.pdf BScMathematik_MScInformatik.pdf Empfehlungsschreiben_Surfverein.pdf stellenausschreibung.pdf "$final_pdf_file"
+        cp "$final_pdf_file" ../"$current_month_name"
         )
     done   
 }
