@@ -247,15 +247,20 @@ bewerbung() {
 }
 
 arbeitsamt() {
+    if (( $# == 0 )); then
+        echo "Usage: arbeitsamt bewerbung1/ ..."
+    fi
+    # Create dir to collect applications of current month (to upload them easier)
     current_month_name=$(date "+%b")
     mkdir -p "$current_month_name"
     for d in "$@"; do
         # Use subshell to avoid to cd back (via cd ..); Suggested by SpellCheck: https://www.shellcheck.net/wiki/SC2103
         (
-        cd "$d" || exit; 
-        final_pdf_file="gesamt_$(basename "$PWD").pdf"
-        pdfunite anschreiben*.pdf CV_PhilippRost*.pdf BScMathematik_MScInformatik.pdf Empfehlungsschreiben_Surfverein.pdf stellenausschreibung.pdf "$final_pdf_file"
-        cp "$final_pdf_file" ../"$current_month_name"
+            cd "$d" || exit; 
+            final_pdf_file="gesamt_$(basename "$PWD").pdf"
+            pdfunite anschreiben*.pdf CV_PhilippRost*.pdf BScMathematik_MScInformatik.pdf Empfehlungsschreiben_Surfverein.pdf stellenausschreibung.pdf "$final_pdf_file"
+            # Collect application
+            cp "$final_pdf_file" ../"$current_month_name"
         )
     done   
 }
