@@ -308,6 +308,7 @@ export FZF_DEFAULT_COMMAND="find * -path '*/\.*' -prune \
 # Variables
 export EDITOR='nvim'
 export SUDO_EDITOR='nvim'
+export MANPAGER='nvim +Man!'
 
 
 # ╭─────────╮
