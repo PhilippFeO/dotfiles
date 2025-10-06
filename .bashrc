@@ -308,7 +308,6 @@ export FZF_DEFAULT_COMMAND="find * -path '*/\.*' -prune \
 # Variables
 export EDITOR='nvim'
 export SUDO_EDITOR='nvim'
-export MANPAGER='nvim +Man!'
 
 
 # ╭─────────╮
@@ -339,6 +338,8 @@ if [ -f ~/.dlr_bash_aliases ]; then
     ssh-add ~/.ssh/dlr-gitlab 2> /dev/null
     ssh-add ~/.ssh/github 2> /dev/null
 fi
+
+# export MANPAGER='n +Man!'
 
 # ╭───────────────────────────────────────╮
 # │ Syntax Completion for grocery_shopper │
