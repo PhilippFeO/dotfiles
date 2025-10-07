@@ -10,7 +10,7 @@ Comment=Erstelle und öffne Tagebucheintrag
 # <> necessary if scripts lies in nemo/actions/
 # %U = file:// + absolute path
 # %F = /home/... style path to file
-Exec=bash -c 'source ~/.tagebuch/.venv/tagebuch/bin/activate && ~/.tagebuch/.nemo/render_diary_template.py %P' # oder %F + Selection=s
+Exec=bash -c 'source ~/.tagebuch/.venv/tagebuch/bin/activate && ~/.tagebuch/.nemo/open_diary_entry.py %P' # oder %F + Selection=s
 Icon=calendar
 # Auswahlmodus: [s]ingle, [m]ultiple, none (Hintergrundklick), notnone
 #   https://github.com/linuxmint/nemo/blob/cbeb6afe60d0bd71fdb1f9c43ba51271e843333e/files/usr/share/nemo/actions/sample.nemo_action#L48
