@@ -10,15 +10,15 @@ Comment=Erstelle und öffne Tagebucheintrag
 # <> necessary if scripts lies in nemo/actions/
 # %U = file:// + absolute path
 # %F = /home/... style path to file
-Exec=bash -c 'source ~/.tagebuch/.venv/tagebuch/bin/activate && python3 ~/.tagebuch/.nemo/open_diary_entry.py %F' # oder %P + Selection=none
+Exec=bash -c 'source ~/.tagebuch/.venv/tagebuch/bin/activate && ~/.tagebuch/.nemo/open_diary_entry.py %P' # oder %F + Selection=s
 Icon=calendar
 # Auswahlmodus: [s]ingle, [m]ultiple, none (Hintergrundklick), notnone
 #   https://github.com/linuxmint/nemo/blob/cbeb6afe60d0bd71fdb1f9c43ba51271e843333e/files/usr/share/nemo/actions/sample.nemo_action#L48
-Selection=s
+Selection=none
 # Bei welchen Dateiendungen Aktion angezeigt werden soll,
 # bzw. wenn Selection=none, dann Aktion anzeigen, wenn jeweilige Endung in gegenwärtigem Verzeichnis
 # (Unterschied zu Files unklar)
-Extensions=.jinja.html;
+Extensions=.jinja;
 Quote=double
 # An welchen Orten/in welchen Verzeichnissen die Aktion angezeigt werden soll
 Locations=~/.tagebuch/*;

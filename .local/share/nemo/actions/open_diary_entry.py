@@ -1,18 +1,10 @@
 import sys
 import subprocess
 from pathlib import Path
-from tagebuch.render_diary_template import DateDir, render_diary_template
+from render_diary_template import DateDir, render_diary_template
 
 
-def open_diary_entry(
-    rendered_html: str,
-    date_dir: DateDir,
-):
-    """Schreibe erstelltes HTML in Datei, um sie per Firefox anzuzeigen."""
-    (today_file := (date_dir.path / f'{date_dir.path.name}.rendered.html')).write_text(
-        rendered_html
-    )
-
+def find_firefox_profile():
     # ─── Öffne generierten Tagebucheintrag mit Firefox ──────────
     firefox_profiles = tuple((Path.home() / '.mozilla/firefox/').glob('*.Tagebuch'))
     assert len(firefox_profiles) == 1, (
@@ -20,16 +12,28 @@ def open_diary_entry(
     )
     fp = firefox_profiles[0]
     assert fp.is_dir(), f'Firefoxprofil „{firefox_profiles}“ ist kein Verzeichnis.'
+    return fp
+
+
+def open_rendered_file(
+    rendered_file: Path,
+):
+    """Schreibe erstelltes HTML in Datei, um sie per Firefox anzuzeigen."""
+    fp = find_firefox_profile()
     subprocess.run(
-        f'firefox --profile {fp} --new-window {today_file}'.split(),
+        f'firefox --profile {fp} --new-window {rendered_file}'.split(),
     )
 
 
 if __name__ == '__main__':
-    today_dir = Path(sys.argv[1])
-    open_diary_entry(
-        render_diary_template(
-            td := DateDir(today_dir),
-        ),
-        td,
+    selection = Path(sys.argv[1])
+    today_dir = DateDir(selection.parent if selection.is_file() else selection)
+    rendered_html: str = render_diary_template(
+        today_dir,
+    )
+    (rendered_file := Path(f'/tmp/{today_dir.date}.rendered.html')).write_text(
+        rendered_html
+    )
+    open_rendered_file(
+        rendered_file,
     )
