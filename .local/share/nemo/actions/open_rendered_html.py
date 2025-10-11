@@ -1,7 +1,7 @@
 import sys
 import subprocess
 from pathlib import Path
-from render_diary_template import DateDir, render_diary_template
+from tagebuch.render_diary_template import DateFile, render_diary_template
 
 
 def find_firefox_profile():
@@ -27,11 +27,12 @@ def open_rendered_file(
 
 if __name__ == '__main__':
     selection = Path(sys.argv[1])
-    today_dir = DateDir(selection.parent if selection.is_file() else selection)
+    assert selection.is_file(), f'{selection=} ist keine Datei!'
+    today_file = DateFile(selection)
     rendered_html: str = render_diary_template(
-        today_dir,
+        today_file,
     )
-    (rendered_file := Path(f'/tmp/{today_dir.date}.rendered.html')).write_text(
+    (rendered_file := Path(f'/tmp/{today_file.date}.rendered.html')).write_text(
         rendered_html
     )
     open_rendered_file(

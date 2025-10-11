@@ -2,6 +2,7 @@
 alias lazy='cd ~/.local/share/nvim/lazy/'
 alias mann='~/proj/scripts/nvim-man.sh' # Man page in Neovim (has syntax highlighting)
 alias n='nvim'
+alias nas='n -c "Telescope lsp_dynamic_workspace_symbols"'
 # When using Neovim outside, [n]vim [b]right
 alias nb='nvim "+colorscheme kanagawa-lotus"'
 alias nc='cd ~/dotfiles/nvim' # Change into ~/dotfiles/nvim
