@@ -216,16 +216,17 @@ bewerbungd() {
         echo "Usage: bewerbungd CORPORATION POSITION LINK [ID]"
     else
         if (( $# == 4 )); then
-            full_name=$(bewerbung_helper "$1" "$2" "$3" "$4")
-            echo "Args ($#): $@"
+            # full_name=$(bewerbung_helper "$1" "$2" "$3" "$4")
+            echo "Args (4): ${@}"
         else
-            full_name=$(bewerbung_helper "$1" "$2" "$3")
+            # full_name=$(bewerbung_helper "$1" "$2" "$3")
+            echo "Args (3): ${@}"
         fi
-        cp ~/Dokumente/Lebenslauf/CV_PhilippRost-de.pdf "./$full_name"
-        cp ~/Dokumente/Lebenslauf/CV_PhilippRost-de.tex "./$full_name"
-        cp ~/Dokumente/Bewerbungen/templates/application_de.tex "./$full_name/anschreiben_$full_name.tex"
-        cp ~/Dokumente/Bewerbungen/KI-Entwurf.txt "./$full_name/KI-Entwurf.txt"
-        cd "$full_name" || exit
+        # cp ~/Dokumente/Lebenslauf/CV_PhilippRost-de.pdf "./$full_name"
+        # cp ~/Dokumente/Lebenslauf/CV_PhilippRost-de.tex "./$full_name"
+        # cp ~/Dokumente/Bewerbungen/templates/application_de.tex "./$full_name/anschreiben_$full_name.tex"
+        # cp ~/Dokumente/Bewerbungen/KI-Entwurf.txt "./$full_name/KI-Entwurf.txt"
+        # cd "$full_name" || exit
     fi
 }
 
