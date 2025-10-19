@@ -217,6 +217,7 @@ bewerbungd() {
     else
         if (( $# == 4 )); then
             full_name=$(bewerbung_helper "$1" "$2" "$3" "$4")
+            echo "Args ($#): $@"
         else
             full_name=$(bewerbung_helper "$1" "$2" "$3")
         fi
