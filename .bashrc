@@ -194,7 +194,7 @@ bewerbung_helper(){
     mkdir "$full_name"
 
     ln ~/Dokumente/Bewerbungen/BScMathematik_MScInformatik.pdf "./$full_name"
-    ln -s ~/Dokumente/Bewerbungen/snippets.md "./$full_name/schnipsel.md"
+    ln -s ~/Dokumente/Bewerbungen/schnipsel.md "./$full_name/schnipsel.md"
     ln "$HOME/Dokumente/Bewerbungen/Empfehlungsschreiben Philipp Rost.pdf" "./$full_name/Empfehlungsschreiben_Surfverein.pdf"
     ln -s "$HOME/Dokumente/Zeugnisse_Urkunden_Zertifikate/Arbeitszeugnisse" "./$full_name/Arbeitszeugnisse"
 
