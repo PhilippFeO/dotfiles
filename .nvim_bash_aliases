@@ -16,7 +16,7 @@ alias nm='n -c "Telescope man_pages"'
 alias nO='n -O'
 alias np='cd ~/dotfiles/nvim/projects'
 alias ns='n -S'
-alias ntex='n anschreiben_*.tex' # Open cover letter for applications
+alias ntex='n -c "/opening" anschreiben_*.tex' # Open cover letter for applications
 # Nutze LaTeX-Konfiguration
 #alias nviml='if [ ! -f .latexmkrc ]; then lnlatexmkrc; else echo "File ~/LaTeX/.latexmkrc already present (physically or as link)."; fi && nvim -u ~/dotfiles/nvim/init-latex.lua'
 alias nof='no `fzf`'
