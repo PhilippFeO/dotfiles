@@ -126,7 +126,8 @@ fi
 # trap 'echo -ne "\e[0m"' DEBUG
 # Befehlseingabe in neue Zeile, damit man nicht durch lange Verzeichnis an den Rand gedrängt wird
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\033[0;32m$(__git_ps1 " (%s)")\033[0m\n  \$ '
-PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\A \[\e[32;1m\]\u\[\e[0m\]@\[\e[38;5;106m\]\h\[\e[0m\]:\[\e[38;5;37;1m\]\w\[\e[0m\] \[\e[38;5;172m\]$(__git_ps1 " (%s)")\n\[\e[0m\]  \$ '
+PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)';
+PS1='\D{%d.%m.%Y} \A Uhr \[\e[32;1m\]\u\[\e[0m\]@\[\e[38;5;106m\]\h\[\e[0m\]:\[\e[38;5;37;1m\]\w\[\e[0m\] \[\e[38;5;172m\]$(__git_ps1 " (%s)")\n\[\e[0m\]  \$ '
 PATH=/usr/local/texlive/2023/bin/x86_64-linux/:$PATH
 
 
