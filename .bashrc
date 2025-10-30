@@ -249,6 +249,11 @@ bewerbung() {
     fi
 }
 
+bewerbung_gesamt() {
+    final_pdf_file="gesamt_$(basename "$PWD").pdf"
+    pdfunite anschreiben*.pdf CV_PhilippRost*.pdf BScMathematik_MScInformatik.pdf Empfehlungsschreiben_Surfverein.pdf stellenausschreibung.pdf "$final_pdf_file"
+}
+
 arbeitsamt() {
     if (( $# == 0 )); then
         echo "Usage: arbeitsamt bewerbung1/ ..."
@@ -260,8 +265,7 @@ arbeitsamt() {
         # Use subshell to avoid to cd back (via cd ..); Suggested by SpellCheck: https://www.shellcheck.net/wiki/SC2103
         (
             cd "$d" || exit; 
-            final_pdf_file="gesamt_$(basename "$PWD").pdf"
-            pdfunite anschreiben*.pdf CV_PhilippRost*.pdf BScMathematik_MScInformatik.pdf Empfehlungsschreiben_Surfverein.pdf stellenausschreibung.pdf "$final_pdf_file"
+            bewerbung_gesamt
             # Collect application
             cp "$final_pdf_file" ../"$current_month_name"
         )
