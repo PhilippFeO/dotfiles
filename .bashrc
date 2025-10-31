@@ -251,7 +251,7 @@ bewerbung() {
 
 bewerbung_gesamt() {
     final_pdf_file="gesamt_$(basename "$PWD").pdf"
-    pdfunite anschreiben*.pdf CV_PhilippRost*.pdf BScMathematik_MScInformatik.pdf Empfehlungsschreiben_Surfverein.pdf stellenausschreibung.pdf "$final_pdf_file"
+    pdfunite anschreiben*.pdf CV_PhilippRost*.pdf BScMathematik_MScInformatik.pdf Empfehlungsschreiben_Surfverein.pdf stellen*.pdf "$final_pdf_file"
 }
 
 arbeitsamt() {
