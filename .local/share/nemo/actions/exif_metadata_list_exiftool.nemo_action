@@ -21,8 +21,7 @@
 Active=true
 
 # The name to show in the menu, locale supported with standard desktop spec.
-Name[en]=Display Exif metadata using 'exiftool' utility
-Name[de]=Zeige Metadaten per 'exiftool'
+Name=EXIF-Daten
 
 # Tool tip, locale supported (Appears in the status bar)
 Comment[en]=Display Exif metadata for '%f' using 'exiftool' utility

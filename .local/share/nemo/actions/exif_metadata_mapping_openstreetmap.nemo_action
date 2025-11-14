@@ -18,30 +18,28 @@
 Active=true
 
 # The name to show in the menu, locale supported with standard desktop spec.
-Name[en]=Display GPS position in 'OpenStreetMap'
-Name[de]=Öffne Ort mit 'OpenStreetMap'
+Name=OpenStreetMap
 
 # Tool tip, locale supported (Appears in the status bar)
 Comment[en]=Display GPS position for '%f' in 'OpenStreetMap' online mapping service
-Comment[de]=Zeige Ort für '%f' in 'OpenStreetMap' 
+Comment[de]=Zeige GPS-Koordinaten für „%f“ in „OpenStreetMap“
 
 # What to run.  Enclose in < > to run an executable that resides in the actions folder.
-# Exec=<action_scripts/exif_metadata_mapping_openstreetmap.bash %F>
-Exec=<action_scripts/exif_metadata_list_exiftool.bash %F>
+Exec=<action_scripts/exif_metadata_mapping_openstreetmap.bash %F>
 
 # Icon name to use in the menu - must be a theme icon name
-# Icon-Name=view-pin-symbolic
+Icon-Name=org.openstreetmap.josm
 
 # What type selection: [s]ingle, [m]ultiple, any, notnone, none (background click), or
 # a number representing how many files must be selected to display.
 Selection=s
 
 # What mime-types to display on - this is an array, end with a semicolon
-# Mimetypes=image/jpeg;video/mp4;image/jpg;
+Mimetypes=image/jpeg;video/mp4;image/jpg;
 
 # Dependencies - program executables required for this action to work.
 # This is an array, separate entries with semi-colon, and terminate with a semicolon.
-#Dependencies=exiftool;
+Dependencies=exiftool;
 
 # Conditions - semicolon-separated array of special conditions
 # Conditions=exec <action_scripts/exif_metadata_mapping_openstreetmap.bash %F --condition>;

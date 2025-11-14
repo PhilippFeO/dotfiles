@@ -38,8 +38,8 @@ option="$2"
 mime_type=$(file --brief --mime-type "${file_pathname}")
 
 # check which Exif metadata extraction utilities are available
-which_exif="$(which exif)"
-which_exiftool="$(which exiftool)"
+_="$(which exif)"
+_="$(which exiftool)"
 
 # make an attempt to obtain GPS position
 # NOTE 'exif' tool is preferable, as it does not cheat with GPS data availability and zero coordinates
@@ -66,7 +66,7 @@ fi
 
 # handle interactive case with browser, in case we got here occasionally with GPS position not available
 if [ -z "${gps_position}" ] ; then
-  "${BROWSER}" "ERROR : GPS position not found in file metadata." &
+  notify-send 'Keine GPS-Koordinaten in EXIF-Daten.'
   exit 1
 fi
 
