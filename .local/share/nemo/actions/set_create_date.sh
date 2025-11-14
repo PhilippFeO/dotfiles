@@ -18,5 +18,5 @@ for FILE in "$@"; do
    fi
    # Rename file to include CreateDate info
    filename=$(basename -- "$FILE")
-   mv "$FILE" "$(dirname "$FILE")""/${filename%.*}__CD_$DATE.${filename##*.}"
+   mv "$FILE" "$(dirname "$FILE")""/IMG_CD_$DATE.${filename##*.}"
 done
