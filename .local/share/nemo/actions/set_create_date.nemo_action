@@ -1,8 +1,8 @@
 [Nemo Action]
 Active=true
-Name=Erstelldatum
+Name=Setze Aufnahmedatum
 Comment=Lege Erstelldatum der markierten Fotos fest
-Exec=<set_create_date.sh %F>
+Exec=<action_scripts/set_create_date.sh %F>
 Icon-Name=calendar
 Selection=notnone
 Extensions=nodirs;
