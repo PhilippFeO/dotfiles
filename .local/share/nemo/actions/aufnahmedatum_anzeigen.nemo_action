@@ -21,7 +21,7 @@
 Active=true
 
 # The name to show in the menu, locale supported with standard desktop spec.
-Name=Zeige Aufnahmedatum
+Name=Aufnahmedatum anzeigen
 
 # Tool tip, locale supported (Appears in the status bar)
 Comment[de]=Zeige Aufnahmedatum („Create Date“) für '%f' per 'exiftool'
