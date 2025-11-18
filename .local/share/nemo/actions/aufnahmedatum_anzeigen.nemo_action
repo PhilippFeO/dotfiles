@@ -27,7 +27,7 @@ Name=Aufnahmedatum anzeigen
 Comment[de]=Zeige Aufnahmedatum („Create Date“) für '%f' per 'exiftool'
 
 # What to run.  Enclose in < > to run an executable that resides in the actions folder.
-Exec=<action_scripts/exif_metadata_createdate_exiftool.bash %F>
+Exec=<action_scripts/aufnahmedatum_anzeigen.bash %F>
 
 # Icon name to use in the menu - must be a theme icon name
 # Icon-Name=exifinfo-symbolic
