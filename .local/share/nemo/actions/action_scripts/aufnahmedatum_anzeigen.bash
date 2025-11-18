@@ -7,7 +7,7 @@
 #-----------------------------------------------------------------------------------------------------------------------
 
 # exiftool gibt CreateDate mit vielen Leerzeichen zwischen Tag-Name und : aus. Finde ich unschön, deswegen wird dieser große Leerraum gekürzt und der : zum Tag verschoben
-createdate_exif_data=$(exiftool -CreateDate "$1" | sed 's/   *:/:   /')
+createdate_exif_data=$(exiftool -DateTimeOriginal "$1" | sed 's/   *:/:   /')
 
 # prepare the text to be displayed and arrange for rendering
 text_to_display="${createdate_exif_data}"
