@@ -11,9 +11,6 @@ TIME="12:00:00" # Default Time (it doesn't matter only date is important)
 DATETIME="$DATE $TIME"
 
 # Loop through all selected files
-# Number files when renaming to avoid overwriting because there will be multiple files on the same date
-# and they have to be different, ie. not all 'DTO_yyyy-mm-dd' but 'DTO_yyyy-mm-dd_i'
-i=1
 for FILE in "$@"; do
    if ! /usr/bin/exiftool -DateTimeOriginal="$DATETIME" "$FILE"; then
       zenity --info --text="Error for $FILE."
@@ -21,6 +18,8 @@ for FILE in "$@"; do
    fi
    # Rename file to include DateTimeOriginal info
    filename=$(basename -- "$FILE")
-   mv "$FILE" "$(dirname "$FILE")""/DTO_$DATE""_$i.${filename##*.}"
-   i=$((i+1))
+   # Include old filename to guarantee that the new image is unique
+   # Old approach (`DTO_$DATE_$i`) included a counter but when executed two times on two different fotos,
+   # the first image was overwritten.
+   mv "$FILE" "$(dirname "$FILE")""/${filename%.*}_DTO_$DATE.${filename##*.}"
 done
