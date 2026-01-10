@@ -1,11 +1,11 @@
-[GrapheneOS_Pixel9_Eigentümer]
+[GrapheneOS_Pixel9_Hauptprofil]
 is_set=false
 text_source=/run/user/1000/gvfs/mtp:host=Google_Pixel_9_58150DLAQ000AQ/Interner gemeinsamer Speicher
-text_dest=/home/philipp/.backup-files/GrapheneOS/Eigentümer
-text_notes=Mit diesem Profil wird das Standard-Profil „Eigentümer“ von GrapheneOS meines Google Pixel 9 gesichert.
-text_com_before=test -f '/run/user/1000/gvfs/mtp:host=Google_Pixel_9_58150DLAQ000AQ/Interner gemeinsamer Speicher/Documents/Eigentümer.txt'
+text_dest=/home/philipp/.backup-files/GrapheneOS/Hauptprofil
+text_notes=Mit diesem Profil wird das Profil „Hauptprofil“ von GrapheneOS meines Google Pixel 9 gesichert.
+text_com_before=test -f '/run/user/1000/gvfs/mtp:host=Google_Pixel_9_58150DLAQ000AQ/Interner gemeinsamer Speicher/Documents/Hauptprofil.txt'
 text_com_after=
-text_addit=--log-file=/home/philipp/.grsync/logs/GrapheneOS_Pixel9_Eigentümer.log
+text_addit=--log-file=/home/philipp/.grsync/logs/GrapheneOS_Pixel9_Hauptprofil.log
 check_time=true
 check_perm=true
 check_owner=true
