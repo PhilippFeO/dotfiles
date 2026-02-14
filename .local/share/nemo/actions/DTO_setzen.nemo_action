@@ -1,0 +1,9 @@
+[Nemo Action]
+Active=true
+Name=DTO setzen
+Comment=Lege „Date/Time Original“ Aufnahmedatum der markierten Fotos fest
+Exec=<action_scripts/DTO_setzen.bash %F>
+Icon-Name=showfoto
+Selection=notnone
+Extensions=nodirs;
+Quote=Double

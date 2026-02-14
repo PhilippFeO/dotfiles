@@ -1,9 +1,0 @@
-[Nemo Action]
-Active=true
-Name=Aufnahmedatum setzen
-Comment=Lege Erstelldatum der markierten Fotos fest
-Exec=<action_scripts/aufnahmedatum_setzen.bash %F>
-Icon-Name=showfoto
-Selection=notnone
-Extensions=nodirs;
-Quote=Double

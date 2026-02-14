@@ -21,13 +21,13 @@
 Active=true
 
 # The name to show in the menu, locale supported with standard desktop spec.
-Name=Aufnahmedatum anzeigen
+Name=DTO & GPS-Pos anzeigen
 
 # Tool tip, locale supported (Appears in the status bar)
-Comment[de]=Zeige Aufnahmedatum („Create Date“) für '%f' per 'exiftool'
+Comment[de]=Zeige „Date/Time Original“ & „GPS Position“ für '%f' per 'exiftool'
 
 # What to run.  Enclose in < > to run an executable that resides in the actions folder.
-Exec=<action_scripts/aufnahmedatum_anzeigen.bash %F>
+Exec=<action_scripts/DTO_GPSPos_anzeigen.bash %F>
 
 # Icon name to use in the menu - must be a theme icon name
 # Icon-Name=exifinfo-symbolic
