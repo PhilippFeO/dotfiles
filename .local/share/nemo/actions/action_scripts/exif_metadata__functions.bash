@@ -20,6 +20,7 @@ obtain_gps_position_using_exif () {
   local longitude_ref=$(exif --machine-readable --ifd=GPS --tag GPSLongitudeRef "$1")
   altitude=$(exif --machine-readable --ifd=GPS --tag GPSAltitude "$1")
 
+
   # if GPS position is present, convert to degrees
   if [ -n "${latitude}" ] ; then
     local latitude_tokens=(${latitude//, / })
@@ -31,8 +32,8 @@ obtain_gps_position_using_exif () {
     # Von mir eingefügt/geändert, damit OSM Marker zeigt
     #
     # gps_position="${latitude_degrees}${latitude_ref}, ${longitude_degrees}${longitude_ref}"
-    coordinates_as_numeric_signed "$latitude_degrees" "$longitude_degrees"
-    gps_position="${latitude_degrees}, ${longitude_degrees}"
+    coordinates_as_numeric_signed "$latitude_degrees" "$longitude_degrees" "$latitude_degrees$latitude_ref, $longitude_degrees$longitude_ref"
+    gps_position="$lat, $lng"
     # ────────────────────────────────────────
 
   else
