@@ -38,7 +38,7 @@ Icon-Name=calendar
 Selection=s
 
 # What mime-types to display on - this is an array, end with a semicolon
-Mimetypes=image/jpeg;video/mp4;image/jpg;
+Mimetypes=image/jpeg;video/mp4;image/jpg;video/MOV;image/MOV;
 
 # Dependencies - program executables required for this action to work.
 # This is an array, separate entries with semi-colon, and terminate with a semicolon.
