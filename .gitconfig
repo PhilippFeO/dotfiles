@@ -34,3 +34,5 @@
 	submoduleSummary = 1
 [core]
 	editor = nvim
+[merge]
+	tool = vimdiff
