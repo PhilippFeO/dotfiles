@@ -5,6 +5,8 @@
 	name = PhilippFeO
 [log]
 	date = relative
+[fetch]
+	prune = true
 	; date = short
 [format]
 	; >(N) Padding links einfügen
