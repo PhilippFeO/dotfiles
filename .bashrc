@@ -156,7 +156,7 @@ cl() {
 
 gitbd() {
     git branch -D "$1"
-    git branch --delete --remote origin/"$1"
+    git push origin --delete "$1"
 }
 
 # Activate Virtualenv if present
