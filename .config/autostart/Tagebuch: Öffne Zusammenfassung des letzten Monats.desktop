@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/philipp/.tagebuch/tagebuch_startprogramm.bash
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[de_DE]=Tagebuch: Öffne Zusammenfassung des letzten Monats
+Comment[de_DE]=Öffnet ein Firefox-Fenster mit dediziertem Profil, das eine Tagebuchzusammenfassung des letzten Monats zeigt.
+X-GNOME-Autostart-Delay=2
