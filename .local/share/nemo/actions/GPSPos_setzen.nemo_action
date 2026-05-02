@@ -1,0 +1,9 @@
+[Nemo Action]
+Active=true
+Name=GPS Pos. setzen
+Comment=Lege „GPS Position“ der markierten Fotos fest
+Exec=<action_scripts/GPSPos_setzen.py %F>
+Icon-Name=showfoto
+Selection=notnone
+Extensions=nodirs;
+Quote=Double
