@@ -5,6 +5,7 @@
 # Voraussetzung: Dieses Skript und alle dazugehörigen dotfiles liegen in ~/dotfiles/
 # Finde ich ganz hilfreich: https://www.youtube.com/watch?v=3dJTKsPh7kE
 
+locale-gen en_US.utf8 # Wird in Neovim gesetzt und sollte deswegen vorhanden sein (im WSL muss man es bspw. nachinstallieren).
 
 echo "********************** systemd **********************"
 mkdir -p ~/.config/systemd
@@ -26,9 +27,33 @@ ln -s bash/ ~/.config/bash/
 
 
 echo "********************** Python **********************"
-apt install python-pip
-apt install python-venv
+# pipx ist im Prinzip wie pip, nur dass Pakete „isoliert“ installiert werden: https://pipx.pypa.io/stable/
+apt install python3-pip pipx
+apt install python3-venv
 # TODO: setup virtualenvs via requirements.txt <25-11-2023>
+
+
+echo "********************** Lua **********************"
+# https://github.com/luarocks/luarocks/blob/main/docs/download.md
+# https://github.com/luarocks/luarocks/blob/main/docs/installation_instructions_for_unix.md
+sudo apt install build-essential libreadline-dev unzip
+mkdir -p ~/Downloads
+cd ~/Downloads
+curl -L -R -O https://www.lua.org/ftp/lua-5.1.5.tar.gz
+tar xzf lua-5.1.5.tar.gz
+cd lua-5.1.5
+# Ohne diese Aufrufe gibt es vllt. eine Fehlermeldung, dass readline.h fehle
+sudo apt install libreadline-dev
+make linux-readline
+make test
+echo "********************** Luarocks **********************"
+# Für Links s. oben
+wget https://luarocks.github.io/luarocks/releases/luarocks-3.13.0.tar.gz
+tar xzpf luarocks-3.13.0
+cd luarocks-3.13.0
+./configure --with-lua-include=/usr/local/include
+make
+make install
 
 
 echo "********************** Neovim **********************"
@@ -38,16 +63,26 @@ mv nvim.appimage /usr/bin/
 ln -s nvim/ ~/.config/nvim/
 ln nvim/misc/nvim.desktop ~/.local/share/applications/
 chmod 755 ~/.local/share/applications/nvim.desktop
-# Some plugins like UltiSnips need python3 support
-python3 -m pip install --user --upgrade pynvim
+echo "********************** Python-Provider **********************"
+echo "s. Skript"
+# Some plugins like UltiSnips need python3 support, s. `h provider-python`.
+# pipx install pynvim
+# oder per apt
+# apt install python3-pynvim
+echo "********************** Debugpy **********************"
+mkdir ~/.venv
+cd ~/.venv
+python3 -m venv debugpy-for-nvim
+./debugpy-for-nvim/bin/python -m pip install debugpy
+
 # nodejs, npm für bash-LSP und bash-DAP
 # Installation, LTS-Version
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - &&\
-sudo apt-get install -y nodejs
+# curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - &&\
+# sudo apt-get install -y nodejs
 # Deinstallation
-apt-get purge nodejs &&\
-rm -r /etc/apt/sources.list.d/nodesource.list &&\
-rm -r /etc/apt/keyrings/nodesource.gpg
+# apt-get purge nodejs &&\
+# rm -r /etc/apt/sources.list.d/nodesource.list &&\
+# rm -r /etc/apt/keyrings/nodesource.gpg
 
 
 echo "********************** kitty **********************"
