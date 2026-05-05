@@ -128,7 +128,7 @@ fi
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\033[0;32m$(__git_ps1 " (%s)")\033[0m\n  \$ '
 PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)';
 PS1='\D{%Y-%m-%d} \A Uhr \[\e[32;1m\]\u\[\e[0m\]@\[\e[38;5;106m\]\h\[\e[0m\]:\[\e[38;5;37;1m\]\w\[\e[0m\] \[\e[38;5;172m\]$(__git_ps1 " (%s)")\n\[\e[0m\]  \$ '
-PATH=/usr/local/texlive/2023/bin/x86_64-linux/:$PATH
+PATH=/usr/local/texlive/2023/bin/x86_64-linux/:$HOME/.local/bin:$PATH
 
 
 # <up INTEGER> um INTEGER Verzeichnisse hochzuspringen, anstatt cd ../../.. für 3 einfach up 3
@@ -338,12 +338,8 @@ if [ -f ~/dotfiles/.nvim_bash_aliases ]; then
     source "$HOME/dotfiles/.nvim_bash_aliases"
 fi
 
-if [ -f ~/.dlr_bash_aliases ]; then
-    source "$HOME/.dlr_bash_aliases"
-    # Add ssh keys
-    eval "$(ssh-agent -s)" > /dev/null
-    ssh-add ~/.ssh/dlr-gitlab 2> /dev/null
-    ssh-add ~/.ssh/github 2> /dev/null
+if [ -f ~/.work_machine ]; then
+	source ~/.work_machine
 fi
 
 # export MANPAGER='n +Man!'
