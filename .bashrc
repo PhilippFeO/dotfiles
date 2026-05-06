@@ -171,7 +171,8 @@ function cd() {
     if [[ -z "$VIRTUAL_ENV" ]] ; then
         # If .venv folder is found then activate the vitualenv
         if [[ -d ./.venv ]] ; then
-            source ./.venv/*/bin/activate 2> /dev/null || source ./.venv/bin/activate 2> /dev/null 
+            source ./.venv/*/bin/activate 2> /dev/null || source ./.venv/bin/activate 2> /dev/null
+            echo 'Von Conda auskommentiert.'
         fi
     else
         ## check the current folder belong to earlier VIRTUAL_ENV folder
@@ -353,3 +354,5 @@ _pycomplete() {
     COMPREPLY=( $(find ~/programmieren/grocery-shopper/recipes/ -iname "*.yaml" -type f -exec basename {} \; | grep "^$cur") )
 }
 complete -F _pycomplete grocery_shopper
+
+export ARCGISHOME=$HOME/arcgis/server
