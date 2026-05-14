@@ -52,4 +52,3 @@ quote-style = "single" # Use '' for Strings
 [lint.per-file-ignores]
 # https://docs.astral.sh/ruff/settings/#per-file-ignores
 "__init__.py" = ["E402"]
-"*.ju.py" = ["B018"]

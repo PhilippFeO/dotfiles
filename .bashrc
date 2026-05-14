@@ -172,7 +172,6 @@ function cd() {
         # If .venv folder is found then activate the vitualenv
         if [[ -d ./.venv ]] ; then
             source ./.venv/*/bin/activate 2> /dev/null || source ./.venv/bin/activate 2> /dev/null
-            echo 'Von Conda auskommentiert.'
         fi
     else
         ## check the current folder belong to earlier VIRTUAL_ENV folder
