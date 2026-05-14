@@ -344,11 +344,17 @@ fi
 
 
 ipp(){
-    [ $? != 1 ] && echo 'Usage: ipp NAME'
-    echo "Initialize Python Project."
-    mkdir "$1" && cd "$1"
-    cp ~/Vorlagen/Makefile .
-    make init
+    if [ $# != 1 ]; then
+        echo 'Usage: ipp NAME'
+    else
+        echo "Initialize Python Project '$1'..."
+        mkdir "$1" || return 1
+        echo "Change directory to '$1'/"
+        cd "$1" || return 2
+        cp ~/Vorlagen/Makefile .
+        make init
+        echo "Python Project initialized."
+    fi
 }
 
 # export MANPAGER='n +Man!'
