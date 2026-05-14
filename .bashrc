@@ -346,7 +346,8 @@ fi
 ipp(){
     [ $? != 1 ] && echo 'Usage: ipp NAME'
     echo "Initialize Python Project."
-    cp ~/Vorlagen/Makefile ./$1
+    mkdir "$1" && cd "$1"
+    cp ~/Vorlagen/Makefile .
     make init
 }
 
