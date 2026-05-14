@@ -344,8 +344,10 @@ fi
 
 
 ipp(){
+    [ $? != 1 ] && echo 'Usage: ipp NAME'
     echo "Initialize Python Project."
-    
+    cp ~/Vorlagen/Makefile ./$1
+    make init
 }
 
 # export MANPAGER='n +Man!'
