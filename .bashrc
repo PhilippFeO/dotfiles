@@ -349,7 +349,7 @@ ipp(){
     else
         echo "Initialize Python Project '$1'..."
         mkdir "$1" || return 1
-        echo "Change directory to '$1'/"
+        echo "Change directory to $1/"
         cd "$1" || return 2
         cp ~/Vorlagen/Makefile .
         make init
