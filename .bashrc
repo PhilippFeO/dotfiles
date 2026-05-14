@@ -342,6 +342,12 @@ if [ -f ~/.work_machine ]; then
 	source ~/.work_machine
 fi
 
+
+ipp(){
+    echo "Initialize Python Project."
+    
+}
+
 # export MANPAGER='n +Man!'
 
 # ╭───────────────────────────────────────╮
