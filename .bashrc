@@ -342,6 +342,13 @@ if [ -f ~/.work_machine ]; then
 	source ~/.work_machine
 fi
 
+
+# ╭─────╮
+# │ SSH │
+# ╰─────╯
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/work_bitbucket ~/.ssh/work_github
+
 # export MANPAGER='n +Man!'
 
 # ╭───────────────────────────────────────╮
