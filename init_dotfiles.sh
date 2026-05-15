@@ -64,7 +64,7 @@ ln -s nvim/ ~/.config/nvim/
 ln nvim/misc/nvim.desktop ~/.local/share/applications/
 chmod 755 ~/.local/share/applications/nvim.desktop
 echo "********************** Python-Provider **********************"
-echo "s. Skript"
+echo "Für die auskommentierten Installationsmöglichkeiten siehe dieses Skript."
 # Some plugins like UltiSnips need python3 support, s. `h provider-python`.
 # pipx install pynvim
 # oder per apt
