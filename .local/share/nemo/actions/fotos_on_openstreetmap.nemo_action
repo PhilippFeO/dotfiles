@@ -1,0 +1,15 @@
+[Nemo Action]
+Active=true
+Name=Zeige Orte
+Comment=Zeige die Orte aller Fotos
+Exec=bash -c 'source ~/programmieren/fotos_on_openstreetmap/.venv/bin/activate && python3 ~/programmieren/fotos_on_openstreetmap/__main__.py %F'
+
+Icon-Name=org.openstreetmap.josm
+
+# Background click
+Selection=none
+# otherwise, Action doesnt show up
+Extensions=any;
+
+Quote=Double
+Locations=~/Bilder*;
