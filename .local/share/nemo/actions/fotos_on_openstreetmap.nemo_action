@@ -6,10 +6,10 @@ Exec=bash -c 'source ~/programmieren/fotos_on_openstreetmap/.venv/bin/activate &
 
 Icon-Name=org.openstreetmap.josm
 
-# Background click
-Selection=none
+# Background click or Element
+Selection=any
 # otherwise, Action doesnt show up
-Extensions=any;
+Extensions=.jpg;.jpeg;
 
 Quote=Double
-Locations=~/Bilder*;
+# Locations=~/Bilder*;
