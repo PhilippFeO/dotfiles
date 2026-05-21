@@ -3,6 +3,9 @@
 	# https://wiki.ubuntuusers.de/Paketverwaltung/Tipps/#Konfigurationsdateien-von-deinstallierten-Paketen-entfernen
 # alias config-clear='dpkg -l | grep "^rc " | cut -d" " -f3 | xargs dpkg --purge'
 
+alias py='python3'
+alias python='python3'
+
 # ┌────────────┐
 # │ fzf-Aliase │
 # └────────────┘

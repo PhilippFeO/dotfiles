@@ -43,8 +43,8 @@ curl -L -R -O https://www.lua.org/ftp/lua-5.1.5.tar.gz
 tar xzf lua-5.1.5.tar.gz
 cd lua-5.1.5
 # Ohne diese Aufrufe gibt es vllt. eine Fehlermeldung, dass readline.h fehle
-sudo apt install libreadline-dev
-make linux-readline
+# sudo apt install libreadline-dev
+# make linux-readline
 make test
 echo "********************** Luarocks **********************"
 # Für Links s. oben
@@ -64,7 +64,7 @@ ln -s nvim/ ~/.config/nvim/
 ln nvim/misc/nvim.desktop ~/.local/share/applications/
 chmod 755 ~/.local/share/applications/nvim.desktop
 echo "********************** Python-Provider **********************"
-echo "s. Skript"
+echo "Für die auskommentierten Installationsmöglichkeiten siehe dieses Skript."
 # Some plugins like UltiSnips need python3 support, s. `h provider-python`.
 # pipx install pynvim
 # oder per apt

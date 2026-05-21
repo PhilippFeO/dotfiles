@@ -162,24 +162,22 @@ gitbd() {
 # Activate Virtualenv if present
 # https://stackoverflow.com/questions/45216663/how-to-automatically-activate-virtualenvs-when-cding-into-a-directory
 function cd() {
-    builtin cd "$@" || exit 1
-
+    builtin cd "$@"
     if [ -f "./.aliases.sh" ]; then
         source "./.aliases.sh"
     fi
-    # Check if String is empty
+
     if [[ -z "$VIRTUAL_ENV" ]] ; then
-        # If .venv folder is found then activate the vitualenv
+        ## If env folder is found then activate the vitualenv
         if [[ -d ./.venv ]] ; then
-            source ./.venv/*/bin/activate 2> /dev/null || source ./.venv/bin/activate 2> /dev/null
+            source ./.venv/bin/activate
         fi
     else
         ## check the current folder belong to earlier VIRTUAL_ENV folder
         # if yes then do nothing
         # else deactivate
         parentdir="$(dirname "$VIRTUAL_ENV")"
-        parentdir="$(dirname "$parentdir")"
-        if [[ "$PWD" != "$parentdir"* ]] ; then
+        if [[ "$PWD"/ != "$parentdir"/* ]] ; then
             deactivate
         fi
     fi
@@ -338,9 +336,22 @@ if [ -f ~/dotfiles/.nvim_bash_aliases ]; then
     source "$HOME/dotfiles/.nvim_bash_aliases"
 fi
 
+# ╭────────────────────╮
+# │ Work related stuff │
+# ╰────────────────────╯
 if [ -f ~/.work_machine ]; then
 	source ~/.work_machine
 fi
+if [ -f ~/dotfiles/.work_bash_aliases ]; then
+    source "$HOME/dotfiles/.work_bash_aliases"
+fi
+
+
+# ╭─────╮
+# │ SSH │
+# ╰─────╯
+eval "$(ssh-agent -s)" > /dev/null
+ssh-add ~/.ssh/work_bitbucket ~/.ssh/work_github > /dev/null
 
 
 ipp(){
@@ -368,5 +379,3 @@ _pycomplete() {
     COMPREPLY=( $(find ~/programmieren/grocery-shopper/recipes/ -iname "*.yaml" -type f -exec basename {} \; | grep "^$cur") )
 }
 complete -F _pycomplete grocery_shopper
-
-export ARCGISHOME=$HOME/arcgis/server

@@ -1,0 +1,1 @@
+/mnt/c/Users/Philipp/aliases.ps1

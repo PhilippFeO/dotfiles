@@ -5,3 +5,4 @@ nvim/
 .grsync/logs/
 .config/systemd/user/default.target.requires/
 .config/systemd/user/default.target.wants/
+.config/nemo/desktop-metadata
