@@ -352,7 +352,7 @@ fi
 # ╰─────╯
 eval "$(ssh-agent -s)" > /dev/null
 # Redirect stderr nach stdin
-ssh-add ~/.ssh/work_bitbucket ~/.ssh/work_github 2>&1 /dev/null
+ssh-add ~/.ssh/work_bitbucket ~/.ssh/work_github > /dev/null
 
 
 ipp(){
