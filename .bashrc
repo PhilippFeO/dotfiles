@@ -351,7 +351,7 @@ fi
 # │ SSH │
 # ╰─────╯
 eval "$(ssh-agent -s)" > /dev/null
-ssh-add ~/.ssh/work_bitbucket ~/.ssh/work_github > /dev/null
+ssh-add ~/.ssh/work_bitbucket ~/.ssh/work_github ~/.ssh/GitHub 1&> /dev/null
 
 
 ipp(){
