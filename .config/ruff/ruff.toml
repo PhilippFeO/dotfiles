@@ -27,6 +27,7 @@ ignore = [
     "FA", # Type annotations with backwards compatability for < Python3.9
     "PT001", # Allow '@pytest.fixture' instead of '@pytest.fixture()'; https://docs.astral.sh/ruff/rules/pytest-fixture-incorrect-parentheses-style/
     "Q000", # Use " over '
+    "RUF002", # — instead of -
     "RUF012", # Mutable class attributes should be annotated with `typing.ClassVar`
     "S101", # Warnings on use of 'assert', https://docs.astral.sh/ruff/rules/assert/
     "S603", # Prone to create false positives; https://docs.astral.sh/ruff/rules/subprocess-without-shell-equals-true/
