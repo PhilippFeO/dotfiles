@@ -4,7 +4,6 @@
 # alias config-clear='dpkg -l | grep "^rc " | cut -d" " -f3 | xargs dpkg --purge'
 
 alias py='python3'
-alias python='python3'
 
 # ┌────────────┐
 # │ fzf-Aliase │
@@ -54,6 +53,7 @@ alias jctl='journalctl --user -u'
 alias karte='telnet mapscii.me'
 alias map='telnet mapscii.me'
 alias n='nvim'
+alias nemoc='cd ~/.local/share/nemo/'
 alias op='okular *.pdf'
 alias cv='okular CV*.pdf'
 # alias py='python3'
