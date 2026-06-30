@@ -1,4 +1,4 @@
-# line-length = 150 # Used by E501 (pycodestyle)
+line-length = 128 # Used by E501 (pycodestyle); 128 is half screen width for WQHD
 
 [lint]
 select = [
@@ -33,7 +33,7 @@ ignore = [
     "S603", # Prone to create false positives; https://docs.astral.sh/ruff/rules/subprocess-without-shell-equals-true/
     "T201", # `print()` found
 ]
-
+allowed-confusables = ['—', ]
 [lint.pylint]
 # https://docs.astral.sh/ruff/settings/#lint_pylint_max-statements
 # Related: https://docs.astral.sh/ruff/rules/too-many-statements/
