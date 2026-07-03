@@ -34,6 +34,7 @@ ignore = [
     "T201", # `print()` found
 ]
 allowed-confusables = ['—', ]
+
 [lint.pylint]
 # https://docs.astral.sh/ruff/settings/#lint_pylint_max-statements
 # Related: https://docs.astral.sh/ruff/rules/too-many-statements/
@@ -49,6 +50,7 @@ inline-quotes = "single" # Respected by Q000
 
 [format]
 quote-style = "single" # Use '' for Strings
+docstring-code-format = true # Formatieren Python-Code in Docstrings
 
 [lint.per-file-ignores]
 # https://docs.astral.sh/ruff/settings/#per-file-ignores
