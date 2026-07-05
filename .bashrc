@@ -311,7 +311,7 @@ export FZF_DEFAULT_OPTS="--color=16 --reverse"
 #         -o -path '*dist*' -prune \
 #         -o -path '*egg-info*' -prune \
 #     -o -type f -print -o -type l -print 2> /dev/null"
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --exclude .git'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 
 # Variables
 export EDITOR='nvim'
