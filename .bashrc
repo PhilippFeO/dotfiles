@@ -382,3 +382,7 @@ _pycomplete() {
     COMPREPLY=( $(find ~/programmieren/grocery-shopper/recipes/ -iname "*.yaml" -type f -exec basename {} \; | grep "^$cur") )
 }
 complete -F _pycomplete grocery_shopper
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -6,3 +6,4 @@ nvim/
 .config/systemd/user/default.target.requires/
 .config/systemd/user/default.target.wants/
 .config/nemo/desktop-metadata
+.work_bash_aliases
