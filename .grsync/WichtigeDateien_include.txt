@@ -1,6 +1,7 @@
 .keepassxc
-.tagebuch
+tagebuch-dateien/
 dotfiles
 wiki
 Dokumente
 programmieren/grocery-shopper/
+programmieren/tagebuch/
