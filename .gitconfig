@@ -36,5 +36,6 @@
 	submoduleSummary = 1
 [core]
 	editor = nvim
+	excludesfile = /home/philipp/.gitignore
 [merge]
 	tool = vimdiff
