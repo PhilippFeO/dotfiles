@@ -302,15 +302,16 @@ source "$HOME/.config/bash/completion.bash"
 export FZF_DEFAULT_OPTS="--color=16 --reverse"
 # Modified standard command for fzf. Added by the indentation arguments.
 # These are directories I never will visit by command line.
-export FZF_DEFAULT_COMMAND="find * -path '*/\.*' -prune \
-        -o -path '*Universität*' -prune \
-        -o -path '*Bilder*' -prune \
-        -o -path '*Musik*' -prune \
-        -o -path '*__pycache__*' -prune \
-        -o -path '*build*' -prune \
-        -o -path '*dist*' -prune \
-        -o -path '*egg-info*' -prune \
-    -o -type f -print -o -type l -print 2> /dev/null"
+# export FZF_DEFAULT_COMMAND="find * -path '*/\.*' -prune \
+#         -o -path '*Universität*' -prune \
+#         -o -path '*Bilder*' -prune \
+#         -o -path '*Musik*' -prune \
+#         -o -path '*__pycache__*' -prune \
+#         -o -path '*build*' -prune \
+#         -o -path '*dist*' -prune \
+#         -o -path '*egg-info*' -prune \
+#     -o -type f -print -o -type l -print 2> /dev/null"
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 
 # Variables
 export EDITOR='nvim'
