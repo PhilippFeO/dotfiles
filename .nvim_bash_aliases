@@ -7,6 +7,7 @@ alias nas='n -c "Telescope lsp_dynamic_workspace_symbols"'
 alias nb='nvim "+colorscheme kanagawa-lotus"'
 alias nc='cd ~/dotfiles/nvim' # Change into ~/dotfiles/nvim
 alias ncf='nc; nf'
+alias ndb='n -c "DBUI"'
 alias nf='n `fzf`' # Open Neovim with fzf
 alias ngit='n -c "Neogit kind=replace"' # start Neovim with Neogit's `git status` open
 alias nh='nvim -c "lua require('\'telescope_utils\'').my_help_tags()"'

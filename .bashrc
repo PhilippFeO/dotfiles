@@ -342,11 +342,8 @@ fi
 # ╭────────────────────╮
 # │ Work related stuff │
 # ╰────────────────────╯
-if [ -f ~/.work_machine ]; then
-	source ~/.work_machine
-fi
-if [ -f ~/dotfiles/.work_bash_aliases ]; then
-    source "$HOME/dotfiles/.work_bash_aliases"
+if [ -f ~/.work_bashrc ]; then
+	source ~/.work_bashrc
 fi
 
 
